@@ -1,0 +1,47 @@
+<div class="makeleft">
+<h1>{{title}}</h1>
+  <form #f="ngForm">
+    <label>Feature</label>
+    <input type="text" class="form-control" name="feature" [(ngModel)]="linkModule.feature" #feature="ngModel"
+           placeholder="Feature"> <br/>
+
+
+    <label>Website Name</label>
+    <input type="text" class="form-control" name="websitename" [(ngModel)]="linkModule.websitename"
+           #websitename="ngModel"
+           placeholder="Website Name" required> <br/>
+
+    <label>Link</label>
+    <input type="text" class="form-control" name="link" [(ngModel)]="linkModule.link" #link="ngModel"
+           placeholder="Link" required> <br/>
+
+
+    <label>Is Approved</label> <br>
+    <input type="radio" name="isApproved" [value]=true [checked]="linkModule.isapproved===true" [(ngModel)]="linkModule.isapproved">True
+    <input type="radio" name="isApproved" [value]=false [checked]="linkModule.isapproved===false" [(ngModel)]="linkModule.isapproved">False <br>
+    <!--  <input type="text" class="form-control" name="isapproved" [(ngModel)]="linkModule.isapproved" #isapproved="ngModel"-->
+    <!--         placeholder="Feature"> <br/>-->
+
+    <br>
+
+    <label>Side</label> <br>
+<!--    <select  name="side" [(ngModel)]="linkModule.side" style="width: 80% !important;" required>-->
+<!--      <option value="frontend" name="side" >Frontend</option>-->
+<!--      <option value="backend" >Backend</option>-->
+<!--      <option value="server" >Server</option>-->
+<!--      <option value="database" >Database</option>-->
+<!--    </select>-->
+<!--    <br><br>-->
+    <input type="text" class="form-control" name="side" [(ngModel)]="linkModule.side" #side="ngModel"
+           placeholder="Side"> <br/>
+
+
+    <label>Type</label>
+    <input type="text" class="form-control" name="type" [(ngModel)]="linkModule.type" #type="ngModel" required
+           placeholder="Type"> <br/>
+
+
+    <button btn btn-primary (click)="clearForm()" class="submitbtn btn btn-primary">Clear All</button>
+    <button (click)="submitForm()" [disabled]="!f.form.valid" class="submitbtn btn btn-primary">{{submitBtn}}</button>
+  </form>
+</div>

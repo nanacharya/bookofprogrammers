@@ -1,0 +1,34 @@
+<!--<mat-cell *matCellDef="let element" (click)="$event.stopPropagation()">-->
+<!--  <a (click)="editItem(element)" data-toggle="modal" data-target="#editor" matTooltip="Edit" aria-label="tooltip">-->
+<!--    <i class="fas fa-pencil-alt"></i>-->
+<!--  </a>-->
+<!--  <a (click)="deleteItem(element.id)" data-toggle="modal" data-target="#editor" matTooltip="Delete" aria-label="tooltip">-->
+<!--    <i class="fas fa-trash-alt"></i>-->
+<!--  </a>-->
+<!--</mat-cell>-->
+
+
+
+<!--<mat-cell *matCellDef="let group" (click)="$event.stopPropagation()">
+    <button mat-button (click)="onDelete(group.id)">
+        <mat-icon>delete</mat-icon>
+    </button>
+</mat-cell>-->
+
+
+<ag-grid-angular
+  #agGrid
+  style="width: 95%; height: 400px; margin: auto;"
+  class="ag-theme-balham"
+  [rowData]="rowData"
+  [columnDefs]="columnDefs"
+  rowSelection="single"
+  (gridReady)="onGridReady($event)"
+  [defaultColDef]="defaultColDef"
+  [colResizeDefault]="colResizeDefault"
+>
+</ag-grid-angular>
+
+<button class="btn btn-danger"(click)="deleteRecord()">Delete Selected Value</button>
+<button class="btn btn-primary" (click)="updateRecord()">Update Selected Value</button>
+

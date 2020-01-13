@@ -1,0 +1,163 @@
+<div style="height: 75vh">
+
+  <mat-toolbar color=primary>
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <span><a style="color: white" routerLink=""> Developer Book</a></span>
+      <span class="menu-spacer"></span>
+
+      <div fxShow="true" fxHide.lt-md>
+
+
+        <button mat-button class="mainMenu" [matMenuTriggerFor]="services1">Front End</button>
+        <mat-menu #services1="matMenu">
+          <!--          <button mat-menu-item></button>-->
+          <a mat-menu-item class="nav-link" routerLink="/frontend/abcd">HTML</a>
+          <a mat-menu-item class="nav-link" routerLink="/frontend/css">CSS</a>
+          <a mat-menu-item class="nav-link" routerLink="/frontend/javascript">JAVASCRIPT</a>
+          <a mat-menu-item class="nav-link" routerLink="/frontend/angular">ANGULAR</a>
+          <a mat-menu-item class="nav-link" routerLink="/frontend/extjs">EXTJS</a>
+        </mat-menu>
+
+
+        <button mat-button class="mainMenu" [matMenuTriggerFor]="backend">Back End</button>
+        <mat-menu #backend="matMenu">
+          <a mat-menu-item class="nav-link" routerLink="/backend/java">JAVA</a>
+          <a mat-menu-item class="nav-link" routerLink="/backend/php">PHP</a>
+          <a mat-menu-item class="nav-link" routerLink="/backend/ruby">RUBY</a>
+          <a mat-menu-item class="nav-link" routerLink="/backend/python">PYTHON</a>
+        </mat-menu>
+
+
+        <button mat-button class="mainMenu" [matMenuTriggerFor]="database">Data Base</button>
+
+        <mat-menu #database="matMenu">
+          <button mat-menu-item class="mainMenu" [matMenuTriggerFor]="relational">Relational Data Base</button>
+          <button mat-menu-item class="mainMenu" [matMenuTriggerFor]="objoriented">Object Oriented Data Base</button>
+        </mat-menu>
+
+        <mat-menu #relational="matMenu">
+
+          <a mat-menu-item class="nav-link" *ngFor="let item of relationalDataBaseItem"
+             [routerLink]="'/database/'+ item |lowercase">{{item}}</a>
+
+        </mat-menu>
+
+        <mat-menu #objoriented="matMenu">
+          <a mat-menu-item class="nav-link" *ngFor="let item of objOrientedDataBaseItem"
+             [routerLink]="'/database/'+item | lowercase">{{item}}</a>
+        </mat-menu>
+
+
+        <button mat-button class="mainMenu" [matMenuTriggerFor]="entertenment">Entertainment</button>
+        <mat-menu #entertenment="matMenu">
+          <a mat-menu-item class="nav-link" routerLink="/entertainmnet/game">Programmer Game</a>
+          <a mat-menu-item class="nav-link" routerLink="/entertainmnet/challenges">Coding Challenges</a>
+          <a mat-menu-item class="nav-link" routerLink="/entertainmnet/movies">Programmer Movies</a>
+        </mat-menu>
+
+
+        <button mat-button class="mainMenu" [matMenuTriggerFor]="carrer">Career </button>
+        <mat-menu #carrer="matMenu">
+          <a mat-menu-item class="nav-link" routerLink="/carrer/joblisting">Career Sites</a>
+          <a mat-menu-item class="nav-link" routerLink="/carrer/interview">Interview Preparation </a>
+        </mat-menu>
+
+      </div>
+
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+
+  <mat-sidenav-container fxFlexFill>
+
+    <mat-sidenav #sidenav>
+      <mat-nav-list>
+
+        <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+        <a mat-list-item>
+          <button mat-button class="mainMenu" [matMenuTriggerFor]="services1">Front End</button>
+          <mat-menu #services1="matMenu">
+            <a mat-menu-item class="nav-link" routerLink="/frontend/html">HTML</a>
+            <a mat-menu-item class="nav-link" routerLink="/frontend/css">CSS</a>
+            <a mat-menu-item class="nav-link" routerLink="/frontend/javascript">JAVASCRIPT</a>
+            <a mat-menu-item class="nav-link" routerLink="/frontend/angular">ANGULAR</a>
+            <a mat-menu-item class="nav-link" routerLink="/frontend/extjs">EXTJS</a>
+          </mat-menu>
+        </a>
+
+
+        <a mat-list-item>
+          <button mat-button class="mainMenu" [matMenuTriggerFor]="backend">Back End</button>
+          <mat-menu #backend="matMenu">
+            <a mat-menu-item class="nav-link" routerLink="/backend/java">JAVA</a>
+            <a mat-menu-item class="nav-link" routerLink="/backend/php">PHP</a>
+            <a mat-menu-item class="nav-link" routerLink="/backend/ruby">RUBY</a>
+            <a mat-menu-item class="nav-link" routerLink="/backend/python">PYTHON</a>
+          </mat-menu>
+        </a>
+
+        <a mat-list-item>
+          <button mat-button class="mainMenu" [matMenuTriggerFor]="database">Data Base</button>
+
+          <mat-menu #database="matMenu">
+            <button mat-menu-item class="mainMenu" [matMenuTriggerFor]="relational">Relational Data Base</button>
+            <button mat-menu-item class="mainMenu" [matMenuTriggerFor]="objoriented">Object Oriented Data Base</button>
+          </mat-menu>
+
+          <mat-menu #relational="matMenu">
+
+            <a mat-menu-item class="nav-link" *ngFor="let item of relationalDataBaseItem"
+               [routerLink]="'/database/'+ item |lowercase">{{item}}</a>
+
+          </mat-menu>
+
+          <mat-menu #objoriented="matMenu">
+            <a mat-menu-item class="nav-link" *ngFor="let item of objOrientedDataBaseItem"
+               [routerLink]="'/database/'+item | lowercase">{{item}}</a>
+          </mat-menu>
+
+        </a>
+
+
+        <a mat-list-item>
+          <button mat-button class="mainMenu" [matMenuTriggerFor]="entertenment">Entertainment</button>
+          <mat-menu #entertenment="matMenu">
+            <a mat-menu-item class="nav-link" routerLink="/entertainmnet/game">Programmer Game</a>
+            <a mat-menu-item class="nav-link" routerLink="/entertainmnet/challenges">Coding Challenges</a>
+            <a mat-menu-item class="nav-link" routerLink="/entertainmnet/movies">Programmer Movies</a>
+          </mat-menu>
+
+        </a>
+
+        <a mat-list-item>
+
+        <button mat-button class="mainMenu" [matMenuTriggerFor]="carrer">Career </button>
+        <mat-menu #carrer="matMenu">
+          <a mat-menu-item class="nav-link" routerLink="/career/joblisting">Career Sites</a>
+          <a mat-menu-item class="nav-link" routerLink="/career/interview">Interview Preparation </a>
+        </mat-menu>
+        </a>
+
+
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content fxFlexFill>
+
+      <router-outlet></router-outlet>
+
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+
+  <div style=" position: fixed; width:100% ;bottom: 0px; z-index:1" class="footer">
+    <pb-footerbar></pb-footerbar>
+  </div>
+
+</div>
+

@@ -1,0 +1,38 @@
+[
+
+  {
+    "version": "ExtJS 1.1",
+    "year": 2006,
+    "desc": "The first version of Ext JS was developed by Jack Slocum in 2006. It was a set of utility classes, which is an extension of YUI. He named the library as YUI-ext."
+  },
+
+  {
+    "version": "ExtJS 2.0",
+    "year": 2007,
+    "desc": "Ext JS version 2.0 was released in 2007. This version had a new API documentation for desktop application with limited features. This version doesn’t have backward compatibility with previous version of Ext JS."
+  },
+
+  {
+    "version": "ExtJS 3.0",
+    "year": 2009,
+    "desc": "Ext JS version 3.0 was released in 2009. This version added new features as chart and list view but at the cost of speed. It had backward compatibility with version 2.0."
+  },
+
+  {
+    "version": "ExtJS 4.0",
+    "year": 2011,
+    "desc": "After the release of Ext JS 3, the developers of Ext JS had the major challenge of ramping up the speed. Ext JS version 4.0 was released in 2011. It had the complete revised structure, which was followed by MVC architecture and a speedy application."
+  },
+
+  {
+    "version": "ExtJS 5.0",
+    "year": 2014,
+    "desc": "Ext JS version 5.0 was released in 2014. The major change in this release was to change the MVC architecture to MVVM architecture. It includes the ability to build desktop apps on touch-enabled devices, two-way data binding, responsive layouts, and many more features."
+  },
+
+  {
+    "version": "ExtJS 6",
+    "year": 2006,
+    "desc": "Ext JS 6 merges the Ext JS (for desktop application) and Sencha Touch (for mobile application) framework."
+  }
+  ]

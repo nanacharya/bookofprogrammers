@@ -1,0 +1,64 @@
+<div class="footer-container">
+
+
+</div>
+
+<div class="container footer">
+
+  <div class="row">
+
+    <div class="col-sm quick">
+      <h5>
+        Quick Links
+      </h5>
+      <a routerLink="/login">Admin login</a> <br/>
+
+    </div>
+
+<!--    <div class="col-sm">-->
+<!--      <h5>-->
+<!--        Information-->
+<!--      </h5>-->
+<!--      <a href="#">Link & Resources</a> <br/>-->
+<!--      <a href="#">About Us</a> <br/>-->
+
+<!--    </div>-->
+
+    <div class="col-sm">
+      <h5>
+        Contact Information
+      </h5>
+      <a routerLink="/contact">Contact Us</a><br>
+      Atlanta, GA, 30345
+
+
+    </div>
+
+    <div class="col-sm">
+      <h5>
+        Message Us
+        <label *ngIf="showform===false" class="btn" (click)="showForm(true)">+</label>
+        <label *ngIf="showform===true" class="btn" (click)="showForm(false)">-</label>
+      </h5>
+      <div class="messageForm" *ngIf="showform===true">
+        <form [formGroup]="form" (ngSubmit)="submitForm()">
+          <input type="text" class="form-control" formControlName="name" placeholder="Complete Name"> <br/>
+          <input type="text" class="form-control" formControlName="email" placeholder="Your Email">
+          <div class="alert alert-danger" *ngIf="email.touched && email.errors">Please provide valid email address (ex.
+            abcd@abc.com)
+          </div>
+
+
+          <br/>
+          <input type="text" class="form-control" formControlName="subject" placeholder="Subject"><br/>
+          <!--          <input type="textarea" class="form-control" formControlName="message" placeholder="Message"><br/>-->
+          <textarea rows="4" class="form-control" formControlName="message"
+                    placeholder="Add Comment Here..."></textarea>
+          <button type="submit" class="submitbtn">Submit</button>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>

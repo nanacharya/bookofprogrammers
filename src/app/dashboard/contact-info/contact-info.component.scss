@@ -1,0 +1,57 @@
+.header {
+  width: 60%;
+  height: 60px;
+  margin: auto;
+  color: #9C27B0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.message {
+  text-align: center;
+  color: #673AB7;
+  width: 60%;
+  margin: auto;
+}
+
+.social {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+
+  .listItems {
+    list-style: none;
+    text-align: center;
+  }
+
+  li {
+    float: left;
+    padding: 20px;
+    // text-align: center;
+
+    .image {
+      height: 85px;
+      width: 100px;
+    }
+
+    .type {
+      width: 30px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .details {
+      width: 30px;
+      margin: auto;
+      text-align: center;
+    }
+  }
+}
+
+.clr {
+  clear: both;
+}
+
+agm-map {
+  height: 300px;
+}

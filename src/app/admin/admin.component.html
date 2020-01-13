@@ -1,0 +1,50 @@
+<div class="">
+  <div class="row">
+
+    <div class="col-2">
+
+
+      <mat-accordion *ngFor="let menu of adminMenu">
+
+
+        <mat-expansion-panel>
+          <mat-expansion-panel-header class="panel-header" *ngIf="menu.childMenu.length>0">
+
+            <span>
+            <mat-icon [class]="menu.iconCls" aria-hidden="true"></mat-icon>
+              <!--            <mat-icon>{{menu.iconCls}}</mat-icon>-->
+          </span>
+
+            {{menu.menuText}}
+
+          </mat-expansion-panel-header>
+
+          <mat-expansion-panel-header class="panel-header" *ngIf="menu.childMenu.length===0">
+          <span>
+            <mat-icon [class]="menu.iconCls" aria-hidden="true"></mat-icon>
+          </span>
+            <a [routerLink]="menu.route">
+              {{menu.menuText}}</a>
+          </mat-expansion-panel-header>
+
+          <!--          <p>This is the primary content of the panel.</p>-->
+          <div *ngIf="menu.childMenu.length>0">
+            <mat-action-row *ngFor="let submenu of menu.childMenu">
+              <a [routerLink]="submenu.route">{{submenu.menuText}}</a>
+            </mat-action-row>
+          </div>
+
+        </mat-expansion-panel>
+
+      </mat-accordion>
+
+    </div>
+
+    <div class="col-10">
+      <router-outlet></router-outlet>
+
+    </div>
+
+
+  </div>
+</div>

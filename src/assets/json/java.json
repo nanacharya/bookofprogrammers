@@ -1,0 +1,72 @@
+[
+  {
+    "version": "JDK 1.0",
+    "year": 1996,
+    "desc": "Up to JDK 1.0.1, private and protected keywords could be used together to create yet another form of protection which used to act as a restriction to methods or variables mainly to subclasses of a given class. In JDK 1.0.2, this capability has been removed."
+  },
+  {
+    "version": "JDK 1.1",
+    "year": 1997,
+    "desc": "The concept of Inner Class\nJavaBeans\nJDBC\nRMI\nAWT event model was totally reshaped.\nReflection(which supported Introspection only, modification was not possible at runtime).\nJIT(Just In Time) compiler on Microsoft Windows platforms, produced for JavaSoft by Symantec\nInternationalization and Unicode support originating from Taligent.\n"
+  },
+  {
+    "version": "J2SE",
+    "year": 1998,
+    "desc": "Java plug-in\nJava IDL, an IDL implementation for CORBA interoperability\nCollections framework\nthe Swing graphical API was integrated into the core classes\nSun's JVM was equipped with a JIT compiler for the first time"
+  },
+  {
+    "version": "J2SE 1.3",
+    "year": 2000,
+    "desc": "HotSpot JVM included.\nRMI was modified to support optional compatibility with CORBA.\nJNDI (Java Naming and Directory Interface).\nJava Platform Debugger Architecture (JPDA) included.\nJavaSound.\nSynthetic proxy classes."
+  },
+  {
+    "version": "J2SE 1.4",
+    "year": 2002,
+    "desc": "Improved libraries.\nPerl regular expressions included.\nProvided exception chaining (It allows an exception to encapsulate original lower-level exception).\nIPv6 support (Internet Protocol version 6).\nLogging API (Specified in JSR 47.)\nImage I/O API for reading and writing images in formats like JPEG and PNG.\nXML parser and XSLT processor integrated.\nSecurity and cryptography extensions (JCE, JSSE, JAAS) integrated."
+  },
+  {
+    "version": "J2SE 5.0",
+    "year": 2004,
+    "desc": "It provided compile-time (static) type safety for collections and eliminates the need for most typecasts.\nUsed Metadata or annotations.\nAutoboxing/unboxing.\nEnumerations.\nEnhanced for each loop.\nImproved semantics of execution for multi-threaded Java programs.\nStatic imports."
+  },
+  {
+    "version": "JAVA SE 6",
+    "year": 2006,
+    "desc": "Dropped the support for older Win9x versions.\nScripting Language Support.\nGeneric API for tight integration with scripting languages.\nImproved Web Service support.\nJDBC 4.0 support.\nUse a Java Compiler API to invoke a Java Compiler programmatically."
+  },
+  {
+    "version": "JAVA SE 7",
+    "year": 2011,
+    "desc": "JVM support for dynamic languages.\nCompressed 64-bits pointer.\nStrings added in switch.\nAutomatic resource management in try-statement.\nUnderscores allowed in numeric literals.\nBinary integer literals.\nImproved type interface for creating generic instance. (also called diamond operator <>)\nImproved catching and throwing. (catch multiple exceptions and rethrow with improved type checking)\nProvided Java Deployment rulesets."
+  },
+  {
+    "version": "JAVA SE 8",
+    "year": 2014,
+    "desc": "Language-level support for Lambda expressions.\nAllowed developers to embed JavaScript code within applications.\nAnnotation of Java Types.\nProvided Date and Time API.\nRepeating Annotations.\nLaunching of JavaFX applications.\nRemoval of permanent generation."
+  },
+  {
+    "version": "JDK 9",
+    "year": 2017,
+    "desc": "Modularization of the JDK under Project Jigsaw.\nProvided Money and Currency API.\nTight integration with JavaFX.\nJava implementation of reactive streams.\nMore Concurrency Updates.\nProvided Java Linker.\nAutomatic scaling and sizing."
+  },
+  {
+    "version": "JDK 10",
+    "year": 2018,
+    "desc": "Local-Variable Type Inference\nExperimental Java-Based JIT Compiler This is the integration of the Graal dynamic compiler for the Linux x64 platform\nApplication Class-Data Sharing This allows application classes to be placed in the shared archive to reduce startup and footprint for Java applications\nTime-Based Release Versioning\nParallel Full GC for G1\nGarbage-Collector Interface\nAdditional Unicode Language-Tag Extensions\nRoot Certificates\nThread-Local Handshakes\nHeap Allocation on Alternative Memory Devices\nRemove the Native-Header Generation Tool - javah\nConsolidate the JDK Forest into a Single Repository"
+  },
+  {
+    "version": "JDK 11",
+    "year": 2018,
+    "desc": "Dynamic class-file constants. \n Low-overhead heap profiling.  \n HTTP client (standard)"
+  },
+  {
+    "version": "JDK 12",
+    "year": 2019,
+    "desc": "Switch Expressions (Preview). \n "
+  },
+  {
+    "version": "JDK 13",
+    "year": 2019,
+    "desc": ""
+  }
+]

@@ -1,0 +1,29 @@
+<!--Using ng2 charts and chart js
+ npm install ng2-charts -->
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Uses by browser</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <!--    <p-chart type="doughnut" [data]="exceptions" [options]="options" width="100%" height="318"></p-chart>-->
+    <!--    <span>Hi How are you </span>-->
+
+    <div style="display: block">
+      <canvas baseChart
+              [data]="data"
+              [labels]="labels"
+              [chartType]="type"
+              [options]="pieChartOptions"
+              [plugins]="pieChartPlugin"
+              [legend]="legend"
+              [colors]="backGroundColor"
+
+      >
+
+      </canvas>
+
+    </div>
+
+  </mat-card-content>
+</mat-card>

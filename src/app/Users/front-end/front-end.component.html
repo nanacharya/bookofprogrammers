@@ -1,0 +1,86 @@
+<div class="makeleft">
+
+  <h1>{{title}}</h1>
+  <p>{{description}}</p>
+
+  <div *ngIf="!(rowData.length>0) && !(rowDataForVersion.length>0)">
+    <span>Description Coming Soon......</span>
+  </div>
+
+  <div *ngIf="rowData.length>0">
+
+    <h3>Important Links </h3>
+
+    <pb-common-primetable [cols]="cols" [tableData]="rowData" [datakey]="'feature'" ></pb-common-primetable>
+
+
+    <ag-grid-angular
+      #agGrid
+      style="width: 90%; height: 400px; margin: auto;"
+      class="ag-theme-balham"
+      [rowData]="rowData"
+      [columnDefs]="columnDefs"
+      (gridReady)="onGridReadyfeature($event)"
+      [defaultColDef]="featuredefaultColDef"
+      [colResizeDefault]="featurecolResizeDefault"
+
+    >
+    </ag-grid-angular>
+    <div class="inputForm container-fluid">Add if you know any useful link..
+
+      <form #f="ngForm">
+
+        <div class="row">
+          <div class=" col-3">
+            <label>Feature</label>
+            <input type="text" class="form-control" name="feature" [(ngModel)]="linkModule.feature" #feature="ngModel"
+                   placeholder="Feature" required>
+
+          </div>
+
+          <div class="col-3">
+            <label>Website Name</label>
+            <input type="text" class="form-control" name="websitename" [(ngModel)]="linkModule.websitename"
+                   #websitename="ngModel"
+                   placeholder="Website Name" required>
+
+          </div>
+          <div class="col-3">
+            <label>Link</label>
+            <input type="text" class="form-control" name="link" [(ngModel)]="linkModule.link" #link="ngModel"
+                   placeholder="Link" required>
+          </div>
+        </div>
+
+
+          <label></label>
+          <button btn btn-primary (click)="clearForm()" class="submitbtn btn btn-primary">Clear All</button>
+          <button (click)="submitForm()" [disabled]="!f.form.valid" class="submitbtn btn btn-primary">Add</button>
+
+      </form>
+    </div>
+
+  </div>
+
+  <div *ngIf="rowDataForVersion.length>0">
+
+    <h3>Versions and it's updated date</h3>
+
+
+    <pb-common-primetable [cols]="cols" [tableData]="cars" [datakey]="'vin'" ></pb-common-primetable>
+
+
+    <ag-grid-angular
+      style="width: 90%; height: 400px; margin: auto;"
+      class="ag-theme-balham"
+      [rowData]="rowDataForVersion"
+      [columnDefs]="columnDefsForVersion"
+      (gridReady)="onGridReady($event)"
+      [defaultColDef]="defaultColDef"
+      [colResizeDefault]="colResizeDefault"
+
+
+    >
+    </ag-grid-angular>
+  </div>
+</div>

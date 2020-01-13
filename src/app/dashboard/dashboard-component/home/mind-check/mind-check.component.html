@@ -1,0 +1,62 @@
+<!--<mat-card class="example-card">-->
+<!--  <mat-card-header >-->
+<!--    <div mat-card-avatar class="example-header-image"></div>-->
+<!--    <mat-card-title>Shiba Inu</mat-card-title>-->
+<!--  </mat-card-header>-->
+<!--  <span>ddfdfdfdf</span>-->
+<!--&lt;!&ndash;  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">&ndash;&gt;-->
+<!--  <mat-card-content>-->
+<!--    <p>-->
+<!--      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.-->
+<!--      A small.-->
+<!--    </p>-->
+<!--  </mat-card-content>-->
+<!--  <mat-card-actions>-->
+<!--    <button mat-button>LIKE</button>-->
+<!--    <button mat-button>SHARE</button>-->
+<!--  </mat-card-actions>-->
+<!--</mat-card>-->
+
+<!--Using ng2 charts and chart js
+ npm install ng2-charts -->
+
+<!--<mat-card class="example-card" >-->
+<!--  <mat-card-header>-->
+<!--&lt;!&ndash;    <mat-card-title>What's on your mind, to improve this website</mat-card-title>&ndash;&gt;-->
+<!--    <mat-card-title>What's on your mind</mat-card-title>-->
+<!--  </mat-card-header>-->
+<!--  <mat-card-content>-->
+<!--&lt;!&ndash;    <div class="inputs-group" >&ndash;&gt;-->
+<!--&lt;!&ndash;    <input type="text" placeholder="Topic">&ndash;&gt;-->
+<!--&lt;!&ndash;    <textarea  placeholder="Comment Place here.."></textarea>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+
+
+<!--  </mat-card-content>-->
+
+<!--  <mat-card-actions>-->
+<!--    <button mat-button>LIKE</button>-->
+<!--    <button mat-button>SHARE</button>-->
+<!--  </mat-card-actions>-->
+<!--</mat-card>-->
+
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>What's n you mind, To improve this website</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="inputs-group">
+
+      <input type="text" placeholder="Topic" [(ngModel)]="websiteComment.topic"><br>
+      <input type="email"  placeholder="Add your email here.. " [(ngModel)]="websiteComment.email"><br>
+      <textarea rows="4" placeholder="Comment Place here.." [(ngModel)]="websiteComment.comment"></textarea>
+
+    </div>
+  </mat-card-content>
+
+  <mat-card-footer>
+    <button mat-button (click)="clearData()">Clear</button>
+    <button mat-button [disabled]="!websiteComment.comment" (click)="sendCommit()">Commit</button>
+  </mat-card-footer>
+</mat-card>

@@ -1,0 +1,23 @@
+<div class="makeleft">
+
+
+
+
+  <div *ngIf="rowData.length>0">
+
+    <h1>Latest Added Features</h1>
+    <ag-grid-angular
+      #agGrid
+      style="width: 60%; height: 400px; margin: auto;"
+      class="ag-theme-balham"
+      [rowData]="rowData"
+      [columnDefs]="columnDefs"
+      (gridReady)="onGridReady($event)"
+      [defaultColDef]="defaultColDef"
+      [colResizeDefault]="colResizeDefault"
+
+    >
+    </ag-grid-angular>
+
+  </div>
+</div>

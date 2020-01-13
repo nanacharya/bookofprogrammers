@@ -1,0 +1,34 @@
+<!-- https://bootsnipp.com/snippets/qrQRB -->
+<!-- https://bootsnipp.com/tags/login?page=7 -->
+
+<div class="main">
+  <div class="logo">
+    <span>LOGO</span>
+    <!--    <img src="../../../assets/images/logometalink.jpg" alt="Meta Link">-->
+  </div>
+
+  <div>
+    <form [formGroup]="loginForm" (ngSubmit)="submitlog()">
+      <div class="formDiv">
+        <div class="adminheader">{{loginType}}</div>
+        <hr>
+
+        <label for="username">Username</label>
+        <input type="text" name="username" class="form-control" formControlName="username" placeholder="Type User Name"
+               value="">
+
+        <label for="password">Password</label>
+        <div class="toggle-pass">
+          <input type="password" class="form-control" formControlName="password" placeholder="Enter Your Password"
+                 mlShowHide>
+        </div>
+
+        <button class="submitBtn" type="submit" name="button">Login</button>
+        <h3 *ngIf="!isLoginSuccess" class="alert-danger">Validation Failed !!!</h3>
+      </div>
+    </form>
+
+
+  </div>
+
+</div>

@@ -1,0 +1,38 @@
+[
+  {
+    "version": "Angular 1.x",
+    "year": 2010 ,
+    "desc": ""
+  },
+
+  {
+    "version": "Angular 2.x",
+    "year": 2016 ,
+    "desc": " Written entirely in TypeScript. \n "
+  },
+  {
+    "version": "Angular 4",
+    "year": 2017,
+    "desc": "Introducing HttpClient, a smaller, easier to use, and more powerful library for making HTTP Requests.\nNew router life cycle events for Guards and Resolvers. Four new events: GuardsCheckStart, GuardsCheckEnd, ResolveStart, ResolveEnd join the existing set of life cycle event such as NavigationStart.\nConditionally disable animations."
+  },
+  {
+    "version": "Angular 5",
+    "year": 2017,
+    "desc": ""
+  },
+  {
+    "version": "Angular 6",
+    "year": 2018,
+    "desc": ""
+  },
+  {
+    "version": "Angular 7",
+    "year": 2018,
+    "desc": ""
+  },
+  {
+    "version": "Angular 8",
+    "year": 2019,
+    "desc": ""
+  }
+]
