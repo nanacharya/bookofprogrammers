@@ -1,0 +1,22 @@
+[
+  {
+    "version": "CSS 1",
+    "year": 1996,
+    "desc": "CSS-1 was officially released in 1996, and included properties for adding font properties such as typeface and emphasis color of text, backgrounds, and other elements Text attributes such as spacing between words, letters, and lines of text. Unfortunately, lack of dependable web browser support prevented the popularity of CSS Level 1 for several years."
+  },
+  {
+    "version": "CSS 2",
+    "year": 1998,
+    "desc": "CSS-2 specification was developed by the W3C and published as a recommendation in 1998. Its most notably added properties for positioning that allowed CSS to be used for page layout . It also introduced styles for other media types and more sophisticated methods for selecting elements for styling."
+  },
+  {
+    "version": "CSS 3",
+    "year": 1999,
+    "desc": "The earliest CSS-3 drafts were published in 1999. CSS3 adds presentation-style properties, allowing you to effectively build presentations from Web documents. CSS level 3 is divided into several separate documents called modules. Due to the modularization , different modules have different stability and statuses."
+  },
+  {
+    "version": "HTML",
+    "year": "",
+    "desc": "There is no single CSS4 specification and there is no standard which named as CSS4. But a few level 4 modules exist such as Image Values, Backgrounds & Borders, or Selectors etc., which build on the functionality of a preceding level 3 module. The level 4 modules can collectively be referred to as CSS level 4 . There is only CSS standard, and each module can level up independently."
+  }
+]
