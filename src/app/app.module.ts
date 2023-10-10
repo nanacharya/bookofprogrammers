@@ -6,14 +6,18 @@ import {MainDashboardComponent} from './dashboard/main-dashboard/main-dashboard.
 import {FooterbarComponent} from './dashboard/dashboard-component/footerbar/footerbar.component';
 import {ViewcountComponent} from './dashboard/dashboard-component/home/viewcount/viewcount.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {
-  MatButtonModule, MatCardModule, MatExpansionModule, MatFormFieldModule, MatGridListModule,
-  MatIconModule,
-  MatListModule,
-  MatMenuModule,
-  MatSidenavModule, MatSnackBar,
-  MatToolbarModule
-} from "@angular/material";
+import {MatButtonModule} from "@angular/material/button"
+import {MatCardModule} from "@angular/material/card"
+import {MatExpansionModule} from "@angular/material/expansion"
+import {MatFormFieldModule} from "@angular/material/form-field"
+import {MatGridListModule} from "@angular/material/grid-list"
+import {MatIconModule} from "@angular/material/icon"
+import {MatListModule} from "@angular/material/list"
+import {MatMenuModule} from "@angular/material/menu"
+import {MatSidenavModule} from "@angular/material/sidenav"
+import {MatSnackBar} from "@angular/material/snack-bar"
+import {MatToolbarModule} from "@angular/material/toolbar";
+
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {RouterModule, Routes} from "@angular/router";
 import {HomeComponent} from './dashboard/dashboard-component/home/home.component';
@@ -37,7 +41,7 @@ import {ToastrModule} from "ngx-toastr";
 import {AlertTosterComponent} from './alert-toster/alert-toster.component';
 import {LatestChangesComponent} from './dashboard/dashboard-component/home/latest-changes/latest-changes.component';
 import {ContactInfoComponent} from './dashboard/contact-info/contact-info.component';
-import {AgmCoreModule} from "@agm/core";
+// #import {AgmCoreModule} from "@agm/core";
 import { CareersComponent } from './Users/careers/careers.component';
 import { CommonPrimetableComponent } from './app-kit/common-primetable/common-primetable.component';
 import { CommonPrimetableImplementaionComponent } from './app-kit/common-primetable-implementaion/common-primetable-implementaion.component';
@@ -98,14 +102,14 @@ const routs: Routes = [
     MatFormFieldModule,
     FormsModule,
     AdminModule,
-    AgGridModule.withComponents([]),
+    // AgGridModule.withComponents([]),
     MatGridListModule,
     MatExpansionModule,
     ToastrModule.forRoot(),
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyC5MwxNX-MUEU3vHDcd8BK5KfjV4eZSv2I'
-    }),
-    TableModule,
+    // AgmCoreModule.forRoot({
+    //   apiKey: 'AIzaSyC5MwxNX-MUEU3vHDcd8BK5KfjV4eZSv2I'
+    // }),
+    TableModule, 
 
   ],
   providers: [UtilService, CommonService, GlobalVariable, MatSnackBar],

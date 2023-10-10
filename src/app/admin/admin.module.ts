@@ -46,7 +46,7 @@ const routes: Routes = [
 
 
   ],
-  entryComponents: [AlertSnackbarComponent],
+  // entryComponents: [AlertSnackbarComponent],
 
 })
 export class AdminModule {
