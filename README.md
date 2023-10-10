@@ -25,3 +25,20 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+
+npm install http-server -g
+http-server -p 8181
+ng add @ng-toolkit/universal
+ng g universal
+
+ng run angular:serve-ssr
+npm i @nguniversal/express-engine --save
+https://www.youtube.com/watch?v=tcmbvpNzxBU
+
+
+npm i --save-dev @nativescript/schematics
+ng add @nguniversal/express-engine
+ng add @nguniversal/builders
+

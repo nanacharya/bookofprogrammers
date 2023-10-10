@@ -21,3 +21,955 @@
 
   </div>
 </div>
+
+
+<main id="main" class="site-main" role="main">
+  <header class="page-header">
+    
+      <h2 class="page-title">Common and useful VIM commands</h2>
+      <!-- .page-title -->
+
+              <!-- .breadcrumb -->
+  </header><!-- .page-header -->
+  
+  <article id="page-214" class="post-214 page type-page status-publish hentry">
+              <div class="entry-content">
+
+      
+<p><strong>Vim is a clone, with additions, of Bill Joy’s vi text editor program for Unix. Vim’s author, Bram Moolenaar, based it upon the source code for a port of the Stevie editor to the Amiga and released a version to the public in 1991.</strong></p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-medium"><img decoding="async" fetchpriority="high" width="300" height="300" src="http://localhost:8888wp-content/uploads/2020/05/vim-logo-png-transparent-300x300.png" alt="" class="wp-image-216" srcset="http://localhost:8888/wp-content/uploads/2020/05/vim-logo-png-transparent-300x300.png 300w, http://localhost:8888/wp-content/uploads/2020/05/vim-logo-png-transparent-1020x1024.png 1020w, http://localhost:8888/wp-content/uploads/2020/05/vim-logo-png-transparent-150x150.png 150w, http://localhost:8888/wp-content/uploads/2020/05/vim-logo-png-transparent-768x771.png 768w, http://localhost:8888/wp-content/uploads/2020/05/vim-logo-png-transparent-1530x1536.png 1530w, http://localhost:8888/wp-content/uploads/2020/05/vim-logo-png-transparent-2040x2048.png 2040w, http://localhost:8888/wp-content/uploads/2020/05/vim-logo-png-transparent-75x75.png 75w" sizes="(max-width: 300px) 100vw, 300px"></figure></div>
+
+
+<p><strong>Check and make sure you have Vim in your machine,<em> vim –version </em><br>If you don’t have Download Vim from here, <a href="https://www.vim.org/download.php">https://www.vim.org/download.php</a> </strong></p>
+
+
+
+<p><strong>Open file in vim terminal,   <em>vim  [location of path/filename]<br></em></strong><em><strong>                                                     vim usr/bin/testfile.txt</strong></em></p>
+
+
+
+<h2 class="wp-block-heading"><strong>Arrows Keys:</strong></h2>
+
+
+
+<p><strong><em>h  -&gt; left <br>l -&gt;  right <br>j  -&gt;  down <br>k  -&gt;  up</em></strong></p>
+
+
+
+<h2 class="wp-block-heading"><strong>Navigation:</strong></h2>
+
+
+
+<p><strong><em>gg -&gt; Go to top<br>G -&gt; Go to the last<br>nG -&gt; Go to the nth line</em></strong><br><strong><em><br>w -&gt; goes next first character of the word<br>nw -&gt; goes next nth character of the word<br>10w -&gt; goes after next 10 words first character</em></strong><br><strong><em><br>b -&gt; goes back first character of the word<br>nb -&gt; goes back nth character of the word<br>10b -&gt; goes back before 10 words first character<br><br>e -&gt; goes last character of the word</em></strong><br><strong><em><br>f -&gt; forward<br>F -&gt; backward<br>ft -&gt; goes to the forward t<br>Ft -&gt; goes to the backward t</em></strong><br><strong><em><br>t -&gt; forward until<br>T -&gt; backward until<br>tt -&gt; goes to the forward until t<br>Tt -&gt; goes to the back until t</em></strong></p>
+
+
+
+<h2 class="wp-block-heading">Quit From Vim:</h2>
+
+
+
+<p><strong>First Make sure you are in normal mode <br><em>:q<br>:quit<br>: x<br>:exit<br>ZZ<br>:q!  -&gt; void changes and exit <br>:wq -&gt; save changes and exit </em></strong></p>
+
+
+
+<h2 class="wp-block-heading">Modes in Vim</h2>
+
+
+
+<p><strong>Normal<br>Insert<br>Visual</strong></p>
+
+
+
+<h2 class="wp-block-heading">Normal Mode Commands</h2>
+
+
+
+<p><strong>Delete<br><em>x</em></strong><em><strong> -&gt;  delete character <br>dw  -&gt;  delete the word<br>dd  -&gt;  delete the line<br>nthdd -&gt; delete the next nth number of words </strong></em><br><strong><em>10dd -&gt; delete the next 10 words<br></em></strong><em><strong>d$ / D -&gt;  delete from cursor to the end of the line</strong></em><strong><em><br></em></strong><br><strong>Copy<br></strong><em><strong>yw -&gt;  copy the word<br>yy -&gt;  copy the line<br>y$  -&gt;  copy the line from cursor to the end of the line</strong></em><br><em><strong><br>p -&gt; put/paste the deleted word/line<br>r -&gt; replace the word<br>u -&gt; undo<br>ctrl +r -&gt; redo</strong></em></p>
+
+
+
+<h2 class="wp-block-heading">Insert Mode</h2>
+
+
+
+<p><strong><em>i  -&gt; Change to the Insert Mode<br>I  -&gt;  Change to the insert mode at the first character of the line<br><br>a  -&gt;  insert mode <br>A  -&gt;  insert mode at the end character of the line<br><br>s -&gt;  delete the character and change to the insert mode<br>S  -&gt;  delete the line and change to the insert mode <br><br>o -&gt;  insert the new line into next line and change to the insert mode<br>O  -&gt;  insert the new line into previous line and change to the insert mode<br><br>c -&gt;  change <br>ce / cw -&gt;  change and delete the word and replace the word<br>c$ / C  -&gt;  delete the whole line and  insert <br><br>esc -&gt; come out from edit mode to normal mode<br></em></strong></p>
+
+
+
+<h2 class="wp-block-heading">Visual Mode</h2>
+
+
+
+<p><strong><em>v -&gt; change to the visual mode<br>esc -&gt; to come out from visual mode to normal mode</em></strong></p>
+
+
+
+<h2 class="wp-block-heading">Search In Vim</h2>
+
+
+
+<p><strong>First change to vim to normal mode <br><em>/search_word<br>?search_word <br>n  -&gt;  go to the next matched word<br>ctrl + o  -&gt;  go back to found word<br>ctrl + i  -&gt;  go to next matched word </em></strong></p>
+
+
+
+<h2 class="wp-block-heading">Replace in Vim</h2>
+
+
+
+<p><strong>First change vim to normal mode <br></strong> <strong><em>syntax -&gt;   s/word/new_word/g<br> %/word/new_word/g  -&gt; all words<br> 3,20  s/word/new_word/g  -&gt; – replace from line 3-20<br> %s/word/new_word/gc  -&gt; – replace with confirmation</em></strong> </p>
+
+
+
+<h2 class="wp-block-heading">Execute commands inside vim</h2>
+
+
+
+<p><strong>First change vim to normal mode<br><em>syntax -&gt; !command<br>!pwd -&gt; current path <br>!ls -&gt; list of path</em></strong></p>
+
+
+
+<p></p>
+
+    </div> <!-- entry-content clearfix-->
+    
+<div id="comments" class="comments-area">
+
+<h2 class="comments-title">
+48 Replies to “Common and useful VIM commands”	</h2>
+<ol class="comment-list">
+<li id="comment-6" class="comment even thread-even depth-1">
+<article id="div-comment-6" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7c33d5f962c7852c56f0ff0d552b4fac?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7c33d5f962c7852c56f0ff0d552b4fac?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://www.xmc.pl" class="url" rel="ugc external nofollow">WWW.XMC.PL</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-6"><time datetime="2021-01-31T04:15:22+00:00">January 31, 2021 at 4:15 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=6">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>My brother bookmarked this site for me and I have been going through it for the past several hours. This is really going to aid me and my friends for our class project. By the way, I enjoy the way you write.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-7" class="comment odd alt thread-odd thread-alt depth-1">
+<article id="div-comment-7" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7c33d5f962c7852c56f0ff0d552b4fac?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7c33d5f962c7852c56f0ff0d552b4fac?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://www.pianino.xmc.pl" class="url" rel="ugc external nofollow">Pianino Tapety</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-7"><time datetime="2021-02-05T12:44:43+00:00">February 5, 2021 at 12:44 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=7">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>I really like your blog! Just wantet to write something.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-8" class="comment even thread-even depth-1">
+<article id="div-comment-8" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7c33d5f962c7852c56f0ff0d552b4fac?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7c33d5f962c7852c56f0ff0d552b4fac?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://www.pianino.xmc.pl" class="url" rel="ugc external nofollow">Strojenie Pianin</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-8"><time datetime="2021-02-06T16:35:53+00:00">February 6, 2021 at 4:35 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=8">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Im by using a little issue I cant subscribe your feed, Im using google reader fyi. My mate and that i have been just talking over this excellent topic, she happens to be continually endeavouring to prove me incorrect!  I will show her this kind of post let alone rub it in the little!</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-10" class="comment odd alt thread-odd thread-alt depth-1">
+<article id="div-comment-10" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7c33d5f962c7852c56f0ff0d552b4fac?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7c33d5f962c7852c56f0ff0d552b4fac?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn">Socjologia Zagadnienia</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-10"><time datetime="2021-02-09T23:52:02+00:00">February 9, 2021 at 11:52 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=10">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>I couldnt agree with you more and Im quite happy someone at last came out and said this.  Thanks for the wisdom, Paul</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-11" class="comment even thread-even depth-1">
+<article id="div-comment-11" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7c33d5f962c7852c56f0ff0d552b4fac?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7c33d5f962c7852c56f0ff0d552b4fac?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://www.japan.m106.com" class="url" rel="ugc external nofollow">Japan Links</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-11"><time datetime="2021-02-12T03:45:15+00:00">February 12, 2021 at 3:45 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=11">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>I found your weblog web site on google and examine a number of of your early posts. Proceed to maintain up the superb operate. I just extra up your RSS feed to my MSN Information Reader. In search of forward to studying extra from you afterward!</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-13" class="comment odd alt thread-odd thread-alt depth-1">
+<article id="div-comment-13" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://www.filozofia.xmc.pl" class="url" rel="ugc external nofollow">Filozofia Bóg</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-13"><time datetime="2021-02-18T18:10:20+00:00">February 18, 2021 at 6:10 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=13">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Great info! I recently came across your blog and have been reading along. I thought I would leave my first comment. I don’t know what to say except that I have enjoyed reading. Nice blog. I will keep visiting this blog very often</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-14" class="comment even thread-even depth-1">
+<article id="div-comment-14" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://www.usa.xmc.pl" class="url" rel="ugc external nofollow">Dzialalnosc Czlowieka w USA</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-14"><time datetime="2021-02-22T03:54:15+00:00">February 22, 2021 at 3:54 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=14">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>When I start your Feed it appears to be to be a lot of junk, is the issue on my side?</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-15" class="comment odd alt thread-odd thread-alt depth-1">
+<article id="div-comment-15" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://www.japonia.xmc.pl" class="url" rel="ugc external nofollow">Japonia Gospodarka</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-15"><time datetime="2021-02-26T01:34:26+00:00">February 26, 2021 at 1:34 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=15">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>If you would be a real seeker after truth, it is necessary that at least once in your life you doubt, as far as possible, all things.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-16" class="comment even thread-even depth-1">
+<article id="div-comment-16" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://www.cukrzyca.xmc.pl" class="url" rel="ugc external nofollow">Diabetyka</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-16"><time datetime="2021-02-28T19:34:47+00:00">February 28, 2021 at 7:34 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=16">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>I was browsing on line for some information since yesterday night and I at last found this! This is a magnificent webpage by the way, except it seems a little hard to read in my i phone.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-19" class="comment odd alt thread-odd thread-alt depth-1">
+<article id="div-comment-19" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://www.glass.xmc.pl" class="url" rel="ugc external nofollow">Szklany Portal</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-19"><time datetime="2021-03-08T14:20:07+00:00">March 8, 2021 at 2:20 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=19">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Concise and well crafted, appreciate the data. Would you care basically post some of this on my site basically incorporate a mention of the this website?</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-20" class="comment even thread-even depth-1">
+<article id="div-comment-20" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://www.eleasing.xmc.pl" class="url" rel="ugc external nofollow">Leasing</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-20"><time datetime="2021-03-26T19:07:18+00:00">March 26, 2021 at 7:07 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=20">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Hey! I just want to give a huge thumbs up for the good info you have right here on this post. I will likely be coming again to your blog for extra soon.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-22" class="comment odd alt thread-odd thread-alt depth-1">
+<article id="div-comment-22" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://www.taxes.xmc.pl" class="url" rel="ugc external nofollow">Europejskie Raje Podatkowe</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-22"><time datetime="2021-04-09T02:26:01+00:00">April 9, 2021 at 2:26 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=22">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Awesome website man, looks very nice. Ive been looking for something like this.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-23" class="comment even thread-even depth-1">
+<article id="div-comment-23" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://www.links.m106.com" class="url" rel="ugc external nofollow">SEO Directory</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-23"><time datetime="2021-04-15T00:31:17+00:00">April 15, 2021 at 12:31 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=23">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>You on the homepage of digg or reddit or some other major web page? Cause your hosting is Seriously sluggish suitable now, atleast for me.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-24" class="comment odd alt thread-odd thread-alt depth-1">
+<article id="div-comment-24" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://www.ekonom.xmc.pl" class="url" rel="ugc external nofollow">Ekonomia Finanse</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-24"><time datetime="2021-04-16T19:29:07+00:00">April 16, 2021 at 7:29 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=24">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Resources these as the one you mentioned here will be incredibly useful to myself! Ill publish a hyperlink to this web page on my individual blog. Im positive my site visitors will come across that quite advantageous.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-38" class="comment even thread-even depth-1">
+<article id="div-comment-38" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://www.loans.m106.com" class="url" rel="ugc external nofollow">Loans.M106.COM</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-38"><time datetime="2021-06-12T00:41:35+00:00">June 12, 2021 at 12:41 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=38">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>actually enjoyed what you posted actually. it really isnt that simple to find even remotely good text to  read (you know.. really READ and not just going through it like some uniterested and flesh eating zombie before moving on), so cheers mate for really not wasting any of my time! :p</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-39" class="comment odd alt thread-odd thread-alt depth-1">
+<article id="div-comment-39" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://wwww.wiertarki.xmc.pl" class="url" rel="ugc external nofollow">WIERTŁA KRĘTE</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-39"><time datetime="2021-06-13T21:34:44+00:00">June 13, 2021 at 9:34 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=39">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Really? It really is excellent to witness anyone ultimate begin addressing this stuff, however I?m still not really certain how much I agree with you on it all. I subscribed to your rss feed though and will certainly keep following your writing and possibly down the road I may chime in once again in much more detail good work. Cheers for blogging though!</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-40" class="comment even thread-even depth-1">
+<article id="div-comment-40" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://www.supergeo.xmc.pl" class="url" rel="ugc external nofollow">Geodezja Podział</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-40"><time datetime="2021-06-15T03:17:20+00:00">June 15, 2021 at 3:17 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=40">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Thank you for this blog. Thats all I can say. You most positively have created this blog into something thats eye gap and necessary. You clearly grasp most regarding the topic, youve lined such a lot of bases. nice stuff from this a part of the net. Again, thanks for this blog.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-41" class="comment odd alt thread-odd thread-alt depth-1">
+<article id="div-comment-41" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://www.psychologia.xmc.pl" class="url" rel="ugc external nofollow">Psychologia Koloru</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-41"><time datetime="2021-06-16T07:16:04+00:00">June 16, 2021 at 7:16 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=41">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Hi, I just discovered your blog via Msn. Your own article is actually pertinent to my life at this moment, and I am really happy I ran across your blog post.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-42" class="comment even thread-even depth-1">
+<article id="div-comment-42" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://www.alko.xmc.pl" class="url" rel="ugc external nofollow">Alkoholizm</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-42"><time datetime="2021-06-20T02:16:24+00:00">June 20, 2021 at 2:16 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=42">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Hi there, how do i subscribe to your RSS Feed? Gives thanks</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-47" class="comment odd alt thread-odd thread-alt depth-1">
+<article id="div-comment-47" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://www.ekonom.xmc.pl" class="url" rel="ugc external nofollow">EKONOM.XMC.PL</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-47"><time datetime="2021-07-22T06:28:47+00:00">July 22, 2021 at 6:28 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=47">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>I would like to thank you for the time you have made in writing this blogpost. I am hoping the same top-quality work from you in the future as well. In fact your creative writing skill has inspired me to get my own blog now. Really the blogging is spreading its wings rapidly. Your write up is a good example of it.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-48" class="comment even thread-even depth-1">
+<article id="div-comment-48" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://www.anatomia.xmc.pl" class="url" rel="ugc external nofollow">www.anatomia.xmc.pl</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-48"><time datetime="2021-08-12T00:36:59+00:00">August 12, 2021 at 12:36 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=48">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Well I truly enjoyed studying it. This subject procured by you is very helpful for proper planning.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-50" class="comment odd alt thread-odd thread-alt depth-1">
+<article id="div-comment-50" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://www.links.m106.com" class="url" rel="ugc external nofollow">Links.M106.COM</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-50"><time datetime="2021-09-19T23:39:57+00:00">September 19, 2021 at 11:39 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=50">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>My brother suggested I might like this blog. He was entirely right. This post actually made my day. You can not imagine simply how much time I had spent for this information! Thanks!</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-53" class="comment even thread-even depth-1">
+<article id="div-comment-53" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://www.nafta.xmc.pl" class="url" rel="ugc external nofollow">NAFTA Umowa</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-53"><time datetime="2021-10-03T17:11:14+00:00">October 3, 2021 at 5:11 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=53">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>If clothes make the man, and your clothes were made in a sweatshop, are you an orphan? -anon</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-55" class="comment odd alt thread-odd thread-alt depth-1 parent">
+<article id="div-comment-55" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="https://www.kartofle.xmc.pl" class="url" rel="ugc external nofollow">Produkcja ziemniaka</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-55"><time datetime="2021-10-18T15:21:40+00:00">October 18, 2021 at 3:21 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=55">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>This is a interesting post by the way. I am going to go ahead and bookmark this article for my sister to read later on tomorrow. Keep up the excellent work.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+<ol class="children">
+<li id="comment-61" class="comment byuser comment-author-nacharya even depth-2">
+<article id="div-comment-61" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://2.gravatar.com/avatar/56b7ae1ad59cd55b58aedeb6a12951d0?s=56&amp;d=mm&amp;r=g" srcset="http://2.gravatar.com/avatar/56b7ae1ad59cd55b58aedeb6a12951d0?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn">nanacharya123</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-61"><time datetime="2021-11-24T22:15:02+00:00">November 24, 2021 at 10:15 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=61">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Thank you.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+<li id="comment-56" class="comment odd alt thread-even depth-1 parent">
+<article id="div-comment-56" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="https://www.kava.xmc.pl" class="url" rel="ugc external nofollow">Kava.XMC.pl</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-56"><time datetime="2021-10-21T08:42:27+00:00">October 21, 2021 at 8:42 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=56">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Hі there juѕt wanted to give you a quіck hеads սp. The tеxt in your content seem to be running off the screen iin Safaгi. I’m nott sure if thbis is a format іssue or something to do with ihternet browser comlatibility but I thought I’d post tο let you know. Thee dеsign and style look great t</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+<ol class="children">
+<li id="comment-60" class="comment byuser comment-author-nacharya even depth-2">
+<article id="div-comment-60" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://2.gravatar.com/avatar/56b7ae1ad59cd55b58aedeb6a12951d0?s=56&amp;d=mm&amp;r=g" srcset="http://2.gravatar.com/avatar/56b7ae1ad59cd55b58aedeb6a12951d0?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn">nanacharya123</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-60"><time datetime="2021-11-24T22:14:25+00:00">November 24, 2021 at 10:14 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=60">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>I will check and will improve. Thank you for the comment and suggestion.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+<li id="comment-57" class="comment odd alt thread-odd thread-alt depth-1">
+<article id="div-comment-57" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="https://www.furniture.m106.com" class="url" rel="ugc external nofollow">Furniture</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-57"><time datetime="2021-10-28T08:45:22+00:00">October 28, 2021 at 8:45 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=57">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>I have desired to write something like this on my webpage and this has given me a concept. Cheers.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-58" class="comment even thread-even depth-1">
+<article id="div-comment-58" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="https://www.furniture.m106.com" class="url" rel="ugc external nofollow">Furniture</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-58"><time datetime="2021-10-28T12:18:59+00:00">October 28, 2021 at 12:18 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=58">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Its everything here exactly what I was looking for 🙂 Im so happy that I step in right here.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-59" class="comment odd alt thread-odd thread-alt depth-1">
+<article id="div-comment-59" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="https://pl.linkedin.com/in/tomasz-jerzy-michaC582owski-61a00923" class="url" rel="ugc external nofollow">Tomasz Michalowski</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-59"><time datetime="2021-11-03T17:49:56+00:00">November 3, 2021 at 5:49 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=59">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Wow, I had been lucky to locate this website when I was looking for some information on Bing! Keep up the great work!</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-62" class="comment even thread-even depth-1">
+<article id="div-comment-62" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="https://www.facebook.com/XMCpl/" class="url" rel="ugc external nofollow">Tomasz</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-62"><time datetime="2021-12-03T11:24:03+00:00">December 3, 2021 at 11:24 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=62">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>I wonder how you got so good.  HaHa!  This is really a fascinating blog, lots of stuff that I can get into.  One thing I just want to say is that your design is so perfect!  You certainly know how to get a girls attention!  Im glad that youre here.  I feel like Ive learned something new by being here.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-63" class="comment odd alt thread-odd thread-alt depth-1">
+<article id="div-comment-63" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="https://www.gitara.xmc.pl" class="url" rel="ugc external nofollow">Chwyty gitarowe</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-63"><time datetime="2021-12-03T16:10:32+00:00">December 3, 2021 at 4:10 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=63">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>This is a superb news intended for bloggers. It opens entry to a large spectrum of people who find themselves finding the place to approach their fears. With your current theme, I can gain a visibility My organization is having now. Thanks for this informative article, I learned a lot! <a href="http://www.Webmaster.m106.com" rel="nofollow ugc">Free Webmaster</a></p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-64" class="comment even thread-even depth-1">
+<article id="div-comment-64" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="https://www.google.com/search?q=www.m106.com" class="url" rel="ugc external nofollow">Super Links</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-64"><time datetime="2021-12-04T19:40:47+00:00">December 4, 2021 at 7:40 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=64">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>This blog has got a lot of really helpful stuff on it! Cheers for sharing it with me!</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-65" class="comment odd alt thread-odd thread-alt depth-1 parent">
+<article id="div-comment-65" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="https://www.google.com/search?q=pianino.xmc.pl" class="url" rel="ugc external nofollow">Pianino Opis</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-65"><time datetime="2021-12-05T09:00:26+00:00">December 5, 2021 at 9:00 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=65">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>This site wasnt working yesterday. i tried accesing it but it timed out 3-4 times now but i will access it now. Why did this occur? Am i the only one having this error?</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+<ol class="children">
+<li id="comment-79" class="comment byuser comment-author-nacharya even depth-2">
+<article id="div-comment-79" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://2.gravatar.com/avatar/56b7ae1ad59cd55b58aedeb6a12951d0?s=56&amp;d=mm&amp;r=g" srcset="http://2.gravatar.com/avatar/56b7ae1ad59cd55b58aedeb6a12951d0?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn">nanacharya123</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-79"><time datetime="2022-03-05T02:46:08+00:00">March 5, 2022 at 2:46 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=79">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Hey, Sorry for the inconvenience, Actually there was some issue on the server-side.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+<li id="comment-66" class="comment odd alt thread-even depth-1">
+<article id="div-comment-66" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="https://www.musicsoft.xmc.pl" class="url" rel="ugc external nofollow">Muzyczny Portal</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-66"><time datetime="2021-12-06T11:12:02+00:00">December 6, 2021 at 11:12 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=66">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Respect for this post, I will add up this internet site to my rss feeds, my roommate just recounted me about this as of recent. gracias</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-67" class="comment even thread-odd thread-alt depth-1">
+<article id="div-comment-67" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="https://www.sport.m106.com" class="url" rel="ugc external nofollow">Sport Tennis volleyball</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-67"><time datetime="2021-12-10T15:46:47+00:00">December 10, 2021 at 3:46 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=67">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Many people say that the Internet is full of junk, but awesome websites like this prove that quality still exist.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-68" class="comment odd alt thread-even depth-1">
+<article id="div-comment-68" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="https://duckduckgo.com/?q=www.xmc.pl" class="url" rel="ugc external nofollow">Newsy Polska</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-68"><time datetime="2021-12-12T04:18:56+00:00">December 12, 2021 at 4:18 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=68">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>For now, suffice to say that if you actually want , you will get your own this hypothesis.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-69" class="comment even thread-odd thread-alt depth-1">
+<article id="div-comment-69" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="https://www.youtube.com/watch?v=rEgKz35hlqQ" class="url" rel="ugc external nofollow">Metal Music</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-69"><time datetime="2021-12-12T10:14:44+00:00">December 12, 2021 at 10:14 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=69">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Just discovered this blog thru Yahoo, what a way to brighten up my month!</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-70" class="comment odd alt thread-even depth-1">
+<article id="div-comment-70" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="https://www.ask.com/web?q=www.xmc.pl" class="url" rel="ugc external nofollow">Yahoo</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-70"><time datetime="2021-12-16T00:42:37+00:00">December 16, 2021 at 12:42 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=70">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Hello mate, I just wanted to tell you that this article was actually helpful for me. I was fortunate to take the tips you actually so kindly shared and even put it to use. Your web blog article truly aided me and i also would like to inform your dedicated audience that they really have someone that has her or his thoughts fixed. Thank you once more for the excellent posting. I’ve truly bookmarked this on my favored online bookmarking web site and i also recommend everyone else do the very same.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-71" class="comment even thread-odd thread-alt depth-1">
+<article id="div-comment-71" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="https://duckduckgo.com/?q=www.m106.com" class="url" rel="ugc external nofollow">m106 Development</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-71"><time datetime="2021-12-18T18:01:31+00:00">December 18, 2021 at 6:01 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=71">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>MegaCool Blog indeed!… if anyone else has anything it would be much appreciated. Just wanted to say thanks and keep doing what you’re doing! Great website Enjoy!</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-72" class="comment odd alt thread-even depth-1">
+<article id="div-comment-72" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="https://www.nahaczyku.xmc.pl" class="url" rel="ugc external nofollow">Nahaczyku.pl</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-72"><time datetime="2021-12-20T14:36:40+00:00">December 20, 2021 at 2:36 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=72">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>This is my first time i visit here. I found so many entertaining stuff in your blog, especially its discussion. From the tons of comments on your articles, I guess I am not the only one having all the enjoyment here! Keep up the good work.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-73" class="comment even thread-odd thread-alt depth-1">
+<article id="div-comment-73" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="https://duckduckgo.com/?q=www.m106.com" class="url" rel="ugc external nofollow">Tomasz Michałowski</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-73"><time datetime="2021-12-20T18:23:41+00:00">December 20, 2021 at 6:23 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=73">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Thank you for the post on your blog.  Do you provide an RSS feed?</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-75" class="comment odd alt thread-even depth-1">
+<article id="div-comment-75" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/d9874fc534b5a8fce62439a26ed6ec80?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/d9874fc534b5a8fce62439a26ed6ec80?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="http://Vdo167.com" class="url" rel="ugc external nofollow">Carl</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-75"><time datetime="2021-12-28T05:39:17+00:00">December 28, 2021 at 5:39 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=75">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Great post. I used to be checking continuously this weblog and I’m inspired!<br>
+Extremely helpful information particularly the remaining section :<br>
+) I deal with such information much. I used to be looking for this particular<br>
+info for a long time. Thank you and good luck.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-76" class="comment even thread-odd thread-alt depth-1 parent">
+<article id="div-comment-76" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="https://www.linkedin.com/in/tomasz-jerzy-michaC582owski-xmc-pl/" class="url" rel="ugc external nofollow">Polish Webmaster</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-76"><time datetime="2022-01-06T16:27:00+00:00">January 6, 2022 at 4:27 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=76">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Of course, what a fantastic website and enlightening posts, I will bookmark your website.Best Regards!</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+<ol class="children">
+<li id="comment-78" class="comment byuser comment-author-nacharya odd alt depth-2">
+<article id="div-comment-78" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://2.gravatar.com/avatar/56b7ae1ad59cd55b58aedeb6a12951d0?s=56&amp;d=mm&amp;r=g" srcset="http://2.gravatar.com/avatar/56b7ae1ad59cd55b58aedeb6a12951d0?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn">nanacharya123</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-78"><time datetime="2022-03-05T02:39:59+00:00">March 5, 2022 at 2:39 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=78">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Sure, Hope you are getting more knowledge.</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+<li id="comment-82" class="comment even thread-even depth-1">
+<article id="div-comment-82" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="https://www.antykoncepcja.xmc.pl" class="url" rel="ugc external nofollow">Antykoncepcja Testy</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-82"><time datetime="2022-04-06T19:35:13+00:00">April 6, 2022 at 7:35 pm</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=82">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>Pretty insightful post. Never believed that it was this simple after all. I had spent a superior deal of my time looking for someone to explain this subject clearly and you’re the only one that ever did that. Kudos to you! Keep it up</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+<li id="comment-84" class="comment odd alt thread-odd thread-alt depth-1">
+<article id="div-comment-84" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <img alt="" src="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=56&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7bb9f1e5b38286db66b11e8515cfcbc6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo" height="56" width="56" loading="lazy" decoding="async">						<b class="fn"><a href="https://wegetarianizm.xmc.pl" class="url" rel="ugc external nofollow">Wegetarianizm</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+    <div class="comment-metadata">
+      <a href="http://localhost:8888/#comment-84"><time datetime="2022-04-13T06:38:12+00:00">April 13, 2022 at 6:38 am</time></a> <span class="edit-link"><a class="comment-edit-link" href="http://localhost:8888/wp-admin/comment.php?action=editcomment&amp;c=84">Edit</a></span>					</div><!-- .comment-metadata -->
+
+            </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <p>I like this article yet do not concur with all your points. Cannot argue with the general tone though. Well written as well!</p>
+  </div><!-- .comment-content -->
+
+        </article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol> <!-- .comment-list -->
+
+<p class="no-comments">
+Comments are closed.	</p>
+</div> <!-- .comments-area -->				</article>
+        </main>

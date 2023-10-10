@@ -132,9 +132,52 @@
               "devServerTarget": "angular:serve:production"
             }
           }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "angular:build:development",
+              "serverTarget": "angular:server:development"
+            },
+            "production": {
+              "browserTarget": "angular:build:production",
+              "serverTarget": "angular:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/",
+              "/login",
+              "/contact",
+              "/frontend/:type",
+              "/backend/:type",
+              "/database/:type",
+              "/entertainmnet/:type",
+              "/career/:type"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "angular:build:production",
+              "serverTarget": "angular:server:production"
+            },
+            "development": {
+              "browserTarget": "angular:build:development",
+              "serverTarget": "angular:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
   },
-  "defaultProject": "angular"
+  "defaultProject": "angular",
+  "cli": {
+    "analytics": "2503c6e5-3f26-48b3-90b2-c5a04e6076b2"
+  }
 }
