@@ -15,6 +15,9 @@
         <button mat-button class="mainMenu" [matMenuTriggerFor]="services1">Front End</button>
         <mat-menu #services1="matMenu">
           <!--          <button mat-menu-item></button>-->
+          <a mat-menu-item class="nav-link" routerLink="/frontend/html">HTML Resources</a>
+          <button mat-menu-item class="mainMenu" [matMenuTriggerFor]="angularresources">Angular Resources</button>
+
           <a mat-menu-item class="nav-link" routerLink="/frontend/abcd">HTML</a>
           <a mat-menu-item class="nav-link" routerLink="/frontend/css">CSS</a>
           <a mat-menu-item class="nav-link" routerLink="/frontend/javascript">JAVASCRIPT</a>
@@ -22,6 +25,14 @@
           <a mat-menu-item class="nav-link" routerLink="/frontend/extjs">EXTJS</a>
         </mat-menu>
 
+        <mat-menu #angularresources="matMenu">
+          <a mat-menu-item class="nav-link" routerLink="/frontend/angular-solid-principle">Angular Solid Principle</a>
+          <a mat-menu-item class="nav-link" routerLink="/frontend/angular-modal-window">Angular Modal Window</a>
+          <a mat-menu-item class="nav-link" routerLink="/frontend/angular-pdf">Angular Pdf</a>
+          <a mat-menu-item class="nav-link" routerLink="/frontend/angular-tabs">Angular Tabs</a>
+
+
+        </mat-menu>
 
         <button mat-button class="mainMenu" [matMenuTriggerFor]="backend">Back End</button>
         <mat-menu #backend="matMenu">

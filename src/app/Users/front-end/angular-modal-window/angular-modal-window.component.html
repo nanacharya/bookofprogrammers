@@ -1,0 +1,408 @@
+<main id="main" class="site-main" role="main">
+  <header class="page-header">
+
+    <h1 class="page-title">Different Ways to show Modal Window in Angular</h1>
+    <!-- .page-title -->
+
+    <!-- .breadcrumb -->
+  </header><!-- .page-header -->
+
+  <article id="page-151" class="post-151 page type-page status-publish hentry">
+    <div class="entry-content">
+
+
+      <figure class="wp-block-image size-large"><img decoding="async" fetchpriority="high" width="1024" height="406" src="http://localhost:8888wp-content/uploads/2020/02/Screen-Shot-2020-02-27-at-12.19.45-AM-1024x406.png" alt="" class="wp-image-157" test="./assets/images/2020/02/Screen-Shot-2020-02-27-at-12.19.45-AM-1024x406.png 1024w, ./assets/images/2020/02/Screen-Shot-2020-02-27-at-12.19.45-AM-300x119.png 300w, ./assets/images/2020/02/Screen-Shot-2020-02-27-at-12.19.45-AM-768x304.png 768w, ./assets/images/2020/02/Screen-Shot-2020-02-27-at-12.19.45-AM-1536x609.png 1536w, ./assets/images/2020/02/Screen-Shot-2020-02-27-at-12.19.45-AM-2048x811.png 2048w" sizes="(max-width: 1024px) 100vw, 1024px"></figure>
+
+
+
+      <p>Hi, There, <br>While developing the Angular web application the most common task needs to show a modal window to the website. Here, Today I will show you the common and easy way to implement a modal window into Angular site. Once you look into this and tried by your self you will feel how easy it is.</p>
+
+
+
+      <p>In here I am displaying modal window into two ways, <br>    1) By Using Angular Material Library <br>    2) By Using NGBootstrap Library <br><br>Lets, Drive into a coding part now<br></p>
+
+
+
+      <h3 class="has-vivid-red-color has-text-color wp-block-heading"> 1) By Using Angular Material Library </h3>
+
+
+
+      <p><strong>Step 1) ADD Angular Material into your project<br></strong> To use the Angular material Library Modal window feature you need to have Material  Library install in your project. Here is the process to get Library.<br>–  From Angular CLI run this command <br>         ng add @angular/material<br>If you need more details information for adding Material Library you can visit this site <a href="https://material.angular.io/guide/getting-started">https://material.angular.io/guide/getting-started</a></p>
+
+
+
+      <p><strong>Step 2) Import MatDialogModule to the  @NgModule</strong></p>
+
+
+
+      <pre class="wp-block-code"><code>import '{{ "{" }}'MatDialogModule} from '@angular/material';
+
+@NgModule('{{ "{" }}'
+        ...
+        imports: [MatDialogModule, ...],
+        ...
+})</code></pre>
+
+
+
+      <p><strong>Step 3) Create component having show button (form where you want to show modal window)</strong></p>
+
+
+
+      <pre class="wp-block-code"><code>From CLI you can run this command
+ng g c nameofcomponent</code></pre>
+
+
+
+      <p><em>add following code in component.ts</em></p>
+
+
+
+      <pre class="wp-block-code"><code>import '{{ "{" }}'Component, OnInit} from '@angular/core';
+import '{{ "{" }}'MatDialog} from '@angular/material';
+import '{{ "{" }}'MessageDialogComponent} from './message-dialog/message-dialog.component';
+
+
+@Component('{{ "{" }}'
+        selector: 'app-windowsystem',
+        templateUrl: './windowsystem.component.html',
+        styleUrls: ['./windowsystem.component.scss']
+})
+export class WindowsystemComponent implements OnInit '{{ "{" }}'
+
+        message: string;
+        racf: string;
+        ndate: any;
+        comments: string;
+
+
+        constructor(public dialog: MatDialog) '{{ "{" }}'
+
+    this.message = 'Is tomorrow holiday????';
+    this.racf = 'GHAFF';
+    this.ndate = new Date();
+    this.comments = '';
+    console.log(this.ndate);
+  }
+
+  ngOnInit() '{{ "{" }}'
+  }
+
+  previewMessage(): void '{{ "{" }}'
+    const dialogRef = this.dialog.open(MessageDialogComponent, '{{ "{" }}'
+        width: '500px',
+        data: '{{ "{" }}'message: this.message, racf: this.racf, ndate: this.ndate}
+    });
+
+    dialogRef.afterClosed().subscribe(result =&gt; '{{ "{" }}'
+        console.log('The dialog was closed' + result);
+        this.comments = result;
+    });
+  }
+}
+
+
+export interface NotificationModal '{{ "{" }}'
+        racf: string;
+        ndate: any;
+        message: string;
+}
+</code></pre>
+
+
+
+      <p><em>add the following code in component.html</em></p>
+
+
+
+      <pre class="wp-block-code"><code>&lt;p&gt;Fill the below form..&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Date :- &lt;input type="date" placeholder="choose the date" [(ngModel)]="ndate"&gt;&lt;/li&gt;
+  &lt;li&gt;Racf :- &lt;input type="text" placeholder="Racf ID" [(ngModel)]="racf"&gt;&lt;/li&gt;
+  &lt;li&gt;Message :- &lt;input type="text" placeholder="Notification Message" [(ngModel)]="message"&gt;&lt;/li&gt;
+
+
+&lt;/ol&gt;
+&lt;button type="button" (click)="previewMessage()"&gt;Privew Message&lt;/button&gt;
+
+&lt;p *ngIf="comments"&gt;Your comments is '{{ "{" }}''{{ "{" }}'comments}}&lt;/p&gt;
+</code></pre>
+
+
+
+      <p><strong>step 4) Create a modal window component </strong></p>
+
+
+
+      <pre class="wp-block-code"><code>ng g c modalwindowcomponent</code></pre>
+
+
+
+      <p><em>add following code in modalwindowcomponent html file</em></p>
+
+
+
+      <pre class="wp-block-code"><code>&lt;h1 mat-dialog-title&gt;Notification&lt;/h1&gt;
+&lt;div mat-dialog-content&gt;
+  &lt;p&gt;'{{ "{" }}''{{ "{" }}'data.message}}&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Please add your comments here !!!&lt;/p&gt;
+&lt;input type="text" name="comments" value="comments" [(ngModel)]="comments"&gt;
+&lt;div&gt;'{{ "{" }}''{{ "{" }}'data.racf}}&lt;/div&gt;
+&lt;div&gt;'{{ "{" }}''{{ "{" }}'data.ndate}}&lt;/div&gt;
+
+&lt;button (click)="nothanks()"&gt;No Thanks&lt;/button&gt;
+&lt;button [mat-dialog-close]="comments" cdkFocusInitial&gt;Add comments&lt;/button&gt;
+</code></pre>
+
+
+
+      <p><em>add following code in modalwindowcomponent ts file</em></p>
+
+
+
+      <pre class="wp-block-code"><code>import '{{ "{" }}'Component, Inject, OnInit} from '@angular/core';
+import '{{ "{" }}'MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
+
+@Component('{{ "{" }}'
+        selector: 'app-message-dialog',
+        templateUrl: './message-dialog.component.html',
+        styleUrls: ['./message-dialog.component.scss']
+})
+export class MessageDialogComponent implements OnInit '{{ "{" }}'
+
+        comments: any;
+
+        constructor(@Inject(MAT_DIALOG_DATA) public data,
+                    public   dialogRef: MatDialogRef&lt;MessageDialogComponent&gt;) '{{ "{" }}'
+    console.log(data);
+  }
+
+  ngOnInit() '{{ "{" }}'
+  }
+
+  nothanks() '{{ "{" }}'
+    this.dialogRef.close();
+  }
+}
+</code></pre>
+
+
+
+      <p>That’s all once you run your server you will get from having Preview Message Button. Once click on the button the modal window will be open. <br>In this example, you can share data between parent and child components as well.</p>
+
+
+
+      <figure class="wp-block-image size-large"><img decoding="async" width="1024" height="641" src="http://localhost:8888wp-content/uploads/2020/02/Screen-Shot-2020-02-26-at-11.50.46-PM-1024x641.png" alt="" class="wp-image-153" test="./assets/images/2020/02/Screen-Shot-2020-02-26-at-11.50.46-PM-1024x641.png 1024w, ./assets/images/2020/02/Screen-Shot-2020-02-26-at-11.50.46-PM-300x188.png 300w, ./assets/images/2020/02/Screen-Shot-2020-02-26-at-11.50.46-PM-768x481.png 768w, ./assets/images/2020/02/Screen-Shot-2020-02-26-at-11.50.46-PM-1536x961.png 1536w, ./assets/images/2020/02/Screen-Shot-2020-02-26-at-11.50.46-PM.png 1774w" sizes="(max-width: 1024px) 100vw, 1024px"></figure>
+
+
+
+      <h3 class="has-vivid-red-color has-text-color wp-block-heading">2) By Using NgBootstrap Library </h3>
+
+
+
+      <p><strong>Step 1) Add Ngbootstrap into your project </strong></p>
+
+
+
+      <p>From CLI run this command   <br><em> npm install –save @ng-bootstrap/ng-bootstrap </em><br><em><br></em>In angular.json file under style, section add <br>“styles”: [   “node_modules/bootstrap/dist/css/bootstrap.min.css” ] <br><br>Add @NgModule  <br>import '{{ "{" }}'NgbModule} from ‘@ng-bootstrap/ng-bootstrap’;   <br>@NgModule('{{ "{" }}'   …   imports: <strong>[NgbModule, …]</strong>,   … })<strong> </strong><br><br>For more details visit :<br><a href="https://www.npmjs.com/package/@ng-bootstrap/ng-bootstrap">https://www.npmjs.com/package/@ng-bootstrap/ng-bootstrap </a><br><br> Add bootstrap in your project, In package.json add <br>“bootstrap”: “^4.3.1”,  and run npm install .</p>
+
+
+
+      <p><strong>Step 2) Create component having show button (form where you want to show modal window)</strong></p>
+
+
+
+      <pre class="wp-block-code"><code>From CLI you can run this command
+ng g c nameofcomponent</code></pre>
+
+
+
+      <p><em>add following code in component.ts</em></p>
+
+
+
+      <pre class="wp-block-code"><code>import '{{ "{" }}'Component, OnInit} from '@angular/core';
+import '{{ "{" }}'NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import '{{ "{" }}'ModalWindowComponent} from './modal-window/modal-window.component';
+import '{{ "{" }}'Sms} from '../model/sms';
+
+@Component('{{ "{" }}'
+        selector: 'app-window-using-ngb-modal',
+        templateUrl: './window-using-ngb-modal.component.html',
+        styleUrls: ['./window-using-ngb-modal.component.scss']
+})
+export class WindowUsingNgbModalComponent implements OnInit '{{ "{" }}'
+
+        public sms: Sms;
+        success: boolean;
+        failure: boolean;
+
+        constructor(private modalService: NgbModal) '{{ "{" }}'
+    this.sms = new Sms();
+    this.sms.message = '';
+    this.sms.phonenumber = 0;
+    this.sms.email = '';
+    this.success = false;
+    this.failure = false;
+  }
+
+
+  ngOnInit() '{{ "{" }}'
+  }
+
+  showwindow() '{{ "{" }}'
+    const modalRef = this.modalService.open(ModalWindowComponent, '{{ "{" }}'size: 'lg'});
+    modalRef.componentInstance.sms = this.sms;
+    modalRef.result.then((result) =&gt; '{{ "{" }}'
+        console.log(result);
+      },
+      (result) =&gt; '{{ "{" }}'
+        console.log(result);
+      });
+  }
+
+  sendMessage() '{{ "{" }}'
+    if (this.sms.phonenumber) '{{ "{" }}'
+        this.success = true;
+        this.failure = false;
+    } else '{{ "{" }}'
+        this.failure = true;
+        this.success = false;
+
+
+    }
+  }
+}
+
+
+export class Sms '{{ "{" }}'
+        message: string;
+        phonenumber: number;
+        email: any;
+
+}
+</code></pre>
+
+
+
+      <p><em>add following code in component.html</em></p>
+
+
+
+      <pre class="wp-block-code"><code>&lt;p&gt;To download the ng bootstrap use npm install --save @ng-bootstrap/ng-bootstrap
+&lt;/p&gt;
+
+&lt;h2&gt;Write your message&lt;/h2&gt;
+&lt;label&gt;Message :- &lt;/label&gt;&lt;input style="width: 20%" type="text" placeholder="type your complete message"
+                                 [(ngModel)]="sms.message"&gt; &lt;br&gt;&lt;br&gt;
+
+&lt;button (click)="showwindow()"&gt;Preview Message&lt;/button&gt;&lt;br&gt;&lt;br&gt;
+&lt;label *ngIf="!sms.phonenumber"&gt;Please add phone number in the preview section&lt;/label&gt;&lt;br&gt;
+&lt;strong *ngIf="sms.phonenumber || sms.message || sms.email"&gt;Your complete message &lt;/strong&gt;
+&lt;h3 *ngIf="sms.message &amp;&amp; sms.message!=''"&gt;Message :- '{{ "{" }}''{{ "{" }}'sms.message}}&lt;/h3&gt;
+&lt;h3 *ngIf="sms.phonenumber"&gt;Phone :- '{{ "{" }}''{{ "{" }}'sms.phonenumber}}&lt;/h3&gt;
+&lt;h3 *ngIf="sms.email"&gt;Email :- '{{ "{" }}''{{ "{" }}'sms.email}}&lt;/h3&gt;
+
+&lt;button (click)="sendMessage()"&gt;Send Message&lt;/button&gt;
+
+&lt;br&gt;&lt;br&gt;
+&lt;div *ngIf="success" class="alert alert-warning" role="alert"&gt;Successfully submitted your request.......&lt;/div&gt;
+&lt;div *ngIf="failure" class="alert alert-danger" role="alert"&gt;Something wrong in your request&lt;/div&gt;
+
+</code></pre>
+
+
+
+      <p><strong>step 3) Create a modal window component </strong></p>
+
+
+
+      <pre class="wp-block-code"><code>ng g c modalwindowcomponent</code></pre>
+
+
+
+      <p><em>add following code in modalwindowcomponent html </em></p>
+
+
+
+      <pre class="wp-block-code"><code>&lt;div class="form-group"&gt;
+  &lt;div class="modal-header"&gt;
+    &lt;span class="modal-title"&gt;Send your message&lt;/span&gt;
+    &lt;button (click)="close()" aria-label="Close" class="close" type="button"&gt;
+      &lt;span aria-hidden="true"&gt;X&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;label&gt;Message :- &lt;/label&gt;&lt;input [value]="sms.message" disabled="disabled" type="text"&gt;
+    &lt;br&gt;
+    &lt;label&gt;Phone number:- &lt;/label&gt;&lt;input [(ngModel)]="sms.phonenumber" phoneNumber&gt;
+    &lt;br&gt;
+    &lt;label&gt; Email :- &lt;/label&gt;&lt;input [(ngModel)]="sms.email" type="email"&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div class="modal-footer"&gt;
+  &lt;button class="btn btn-light" (click)="close()"&gt;Submit&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+
+
+
+      <p><em>And below code is in ts file add</em></p>
+
+
+
+      <pre class="wp-block-code"><code>import '{{ "{" }}'Component, OnInit} from '@angular/core';
+import '{{ "{" }}'NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
+import '{{ "{" }}'Sms} from '../../model/sms';
+
+@Component('{{ "{" }}'
+        selector: 'app-modal-window',
+        templateUrl: './modal-window.component.html',
+        styleUrls: ['./modal-window.component.scss']
+})
+export class ModalWindowComponent implements OnInit '{{ "{" }}'
+        public sms = new Sms();
+
+        constructor(private activeModal: NgbActiveModal) '{{ "{" }}'
+  }
+
+  ngOnInit() '{{ "{" }}'
+  }
+
+  close() '{{ "{" }}'
+    this.activeModal.close(this.sms);
+  }
+
+}
+</code></pre>
+
+
+
+      <p>That’s all once you run your server you will get from having Preview Message Button. Once click on the button the modal window will be open. <br>In this example, you can share data between parent and child components as well.</p>
+
+
+
+      <figure class="wp-block-image size-large"><img decoding="async" width="1024" height="455" src="http://localhost:8888wp-content/uploads/2020/02/Screen-Shot-2020-02-27-at-12.08.58-AM-1024x455.png" alt="" class="wp-image-156" test="./assets/images/2020/02/Screen-Shot-2020-02-27-at-12.08.58-AM-1024x455.png 1024w, ./assets/images/2020/02/Screen-Shot-2020-02-27-at-12.08.58-AM-300x133.png 300w, ./assets/images/2020/02/Screen-Shot-2020-02-27-at-12.08.58-AM-768x341.png 768w, ./assets/images/2020/02/Screen-Shot-2020-02-27-at-12.08.58-AM-1536x683.png 1536w, ./assets/images/2020/02/Screen-Shot-2020-02-27-at-12.08.58-AM-2048x910.png 2048w" sizes="(max-width: 1024px) 100vw, 1024px"></figure>
+
+
+
+      <h5 class="wp-block-heading"><strong>Fell free to add questions/comments in the comment section.<br>If you want sources code you can request in comment section as well. </strong></h5>
+
+
+
+      <p></p>
+
+    </div> <!-- entry-content clearfix-->
+
+    <div id="comments" class="comments-area">
+      <div id="respond" class="comment-respond">
+        <h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/angular-modal/#respond" style="display:none;">Cancel reply</a></small></h3><form action="http://localhost:8888/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate=""><p class="logged-in-as">Logged in as Sirjana GhimireAcharya. <a href="http://localhost:8888/wp-admin/profile.php">Edit your profile</a>. <a href="http://localhost:8888/wp-login.php?action=logout&amp;redirect_to=http%3A%2F%2Flocalhost%3A8888%2Fangular-modal%2F&amp;_wpnonce=0a1b7f135a">Log out?</a> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p><p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required=""></textarea></p><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="151" id="comment_post_ID">
+        <input type="hidden" name="comment_parent" id="comment_parent" value="0">
+      </p><input type="hidden" id="_wp_unfiltered_html_comment_disabled" name="_wp_unfiltered_html_comment" value="97391f5390"><script>(function()'{{ "{" }}'if(window===window.parent)'{{ "{" }}'document.getElementById('_wp_unfiltered_html_comment_disabled').name='_wp_unfiltered_html_comment';}})();</script>
+      </form>	</div><!-- #respond -->
+    </div> <!-- .comments-area -->				</article>
+</main>

@@ -47,17 +47,29 @@ import { CommonPrimetableComponent } from './app-kit/common-primetable/common-pr
 import { CommonPrimetableImplementaionComponent } from './app-kit/common-primetable-implementaion/common-primetable-implementaion.component';
 import {TableModule} from "primeng/table";
 import { CommonPrimetableAdminComponent } from './app-kit/common-primetable-admin/common-primetable-admin.component';
+import { HtmlComponent } from './Users/front-end/html/html.component';
+import { AngularSolidPrincipleComponent } from './Users/front-end/angular-solid-principle/angular-solid-principle.component';
+import { AngularModalWindowComponent } from './Users/front-end/angular-modal-window/angular-modal-window.component';
+import { AngularTabsComponent } from './Users/front-end/angular-tabs/angular-tabs.component';
+import { AngularPdfComponent } from './Users/front-end/angular-pdf/angular-pdf.component';
 
 
 const routs: Routes = [
   {path: '', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'contact', component: ContactInfoComponent},
+  {path: 'frontend/html', component: HtmlComponent},
+  {path: 'frontend/angular-modal-window', component: AngularModalWindowComponent},
+  {path: 'frontend/angular-pdf', component: AngularPdfComponent},
+  {path: 'frontend/angular-tabs', component: AngularTabsComponent},
+  {path: 'frontend/angular-solid-principle', component: AngularSolidPrincipleComponent},
   {path: 'frontend/:type', component: FrontEndComponent},
   {path: 'backend/:type', component: BackEndComponent},
   {path: 'database/:type', component: DatabaseComponent},
   {path: 'entertainmnet/:type', component: EntertainmnetComponent},
   {path: 'career/:type', component: CareersComponent},
+  {path: 'frontend/:type', component: FrontEndComponent},
+
 ];
 
 
@@ -82,6 +94,11 @@ const routs: Routes = [
     CommonPrimetableComponent,
     CommonPrimetableImplementaionComponent,
     CommonPrimetableAdminComponent,
+    HtmlComponent,
+    AngularSolidPrincipleComponent,
+    AngularModalWindowComponent,
+    AngularTabsComponent,
+    AngularPdfComponent,
   ],
   imports: [
     BrowserModule,

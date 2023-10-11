@@ -1,0 +1,227 @@
+<main id="main" class="site-main" role="main">
+  <header class="page-header">
+
+    <h1 class="page-title">Different Ways to display pdf in Angular</h1>
+    <!-- .page-title -->
+
+    <!-- .breadcrumb -->
+  </header><!-- .page-header -->
+
+  <article id="page-91" class="post-91 page type-page status-publish hentry">
+    <div class="entry-content">
+
+
+      <p>Hi, There  <br>I spend couple of hours to find out the best way of a display pdf file on the angular website in my previous project. Here, I would like to share the code and the different available options to display pdf in an angular project. In later days, I will write another post on how to easily display binary/blob pdf file in angular with code snippets. </p>
+
+
+
+      <h4 class="wp-block-heading"><strong>1. Using ng2-pdf-viewer Library </strong></h4>
+
+
+
+      <p>a) Install ng2-pdf-viewer from  terminal </p>
+
+
+
+      <pre class="wp-block-code"><code>npm install ng2-pdf-viewer --save </code></pre>
+
+
+
+      <p>b) Add below code in pdfview.component.html</p>
+
+
+
+      <pre class="wp-block-code"><code>
+&lt;pdf-viewer [src]="pdfsrc" [original-size]="false" [render-text]="true" style="display:block"&gt;
+&lt;/pdf-viewer&gt;</code></pre>
+
+
+
+      <p>c) Add below code in pdfview.component.ts</p>
+
+
+
+      <pre class="wp-block-code"><code>import '{{ "{" }}'Component, OnInit} from '@angular/core';
+
+@Component('{{ "{" }}'
+        selector: 'app-pdfview',
+        templateUrl: './pdfview.component.html',
+        styleUrls: ['./pdfview.component.scss']
+})
+export class PdfviewComponent implements OnInit '{{ "{" }}'
+
+        pdfsrc: any;
+        constructor() '{{ "{" }}' }
+
+  ngOnInit() '{{ "{" }}'
+
+this.pdfsrc = 'https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf';
+
+ }
+}</code></pre>
+
+
+
+      <p>3) Don’t forget to add PdfViewerModule in  app.modules.ts</p>
+
+
+
+      <pre class="wp-block-code"><code>import '{{ "{" }}'PdfViewerModule} from 'ng2-pdf-viewer';
+
+@NgModule('{{ "{" }}'
+
+        imports: [
+        PdfViewerModule
+        ]
+});</code></pre>
+
+
+
+      <p>For more details please visit <a href="https://www.npmjs.com/package/ng2-pdf-viewer">https://www.npmjs.com/package/ng2-pdf-viewer</a></p>
+
+
+
+      <br><br>
+
+
+
+      <h4 class="wp-block-heading"><strong>2) Using ngx-extended-pdf-viewer </strong></h4>
+
+
+
+      <p>a) Install ngx-extended-pdf-viewer from  terminal </p>
+
+
+
+      <pre class="wp-block-code"><code>npm i ngx-extended-pdf-viewer --save</code></pre>
+
+
+
+      <p>b) Add below code in angular.json or angular-cli.json</p>
+
+
+
+      <pre class="wp-block-code"><code>"assets": [
+    "src/favicon.ico",
+    "src/assets",
+        '{{ "{" }}'
+        "glob": "**/*",
+        "input": "dist/ngx-extended-pdf-viewer/assets/",
+        "output": "/assets/"
+    }
+  ],
+  "scripts": []</code></pre>
+
+
+
+      <p>c) Add below code in pdfview.component.html</p>
+
+
+
+      <pre class="wp-block-code"><code>&lt;ngx-extended-pdf-viewer [src]="pdfsrc" backgroundColor="#ffffff" [delayFirstView]="1000" [height]="'500px'"
+                         [useBrowserLocale]="true"&gt;
+&lt;/ngx-extended-pdf-viewer&gt;</code></pre>
+
+
+
+      <p>c) Add below code in pdfview.component.ts file</p>
+
+
+
+      <pre class="wp-block-code"><code>import '{{ "{" }}'Component, OnInit} from '@angular/core';
+
+@Component('{{ "{" }}'
+        selector: 'app-pdfview',
+        templateUrl: './pdfview.component.html',
+        styleUrls: ['./pdfview.component.scss']
+})
+export class PdfviewComponent implements OnInit '{{ "{" }}'
+
+        pdfsrc: any;
+        constructor() '{{ "{" }}' }
+
+  ngOnInit() '{{ "{" }}'
+
+this.pdfsrc = 'https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf';
+
+ }
+}</code></pre>
+
+
+
+      <p>d) Don’t forget to add NgxExtendedPdfViewerModule in app.module.ts </p>
+
+
+
+      <pre class="wp-block-code"><code>import '{{ "{" }}'NgxExtendedPdfViewerModule} from 'ngx-extended-pdf-viewer';
+
+@NgModule('{{ "{" }}'
+
+        imports: [
+            NgxExtendedPdfViewerModule,
+
+        ]
+});</code></pre>
+
+
+
+      <pre class="wp-block-preformatted">For more details please visit <a href="https://www.npmjs.com/package/ngx-extended-pdf-viewer">https://www.npmjs.com/package/ngx-extended-pdf-viewer</a></pre>
+
+
+
+      <p></p>
+
+
+
+      <h4 class="wp-block-heading"><strong>3) By using HTML embed tag</strong></h4>
+
+
+
+      <p>a) Add below code in pdfview.component.html</p>
+
+
+
+      <pre class="wp-block-code"><code>  &lt;embed [src]="pdfsrc" width="500" height="375" type="application/pdf"&gt;</code></pre>
+
+
+
+      <p>b) Add below code in pdfview.component.ts file</p>
+
+
+
+      <pre class="wp-block-code"><code>import '{{ "{" }}'Component, OnInit} from '@angular/core';
+
+@Component('{{ "{" }}'
+        selector: 'app-pdfview',
+        templateUrl: './pdfview.component.html',
+        styleUrls: ['./pdfview.component.scss']
+})
+export class PdfviewComponent implements OnInit '{{ "{" }}'
+
+        pdfsrc: any;
+        constructor() '{{ "{" }}' }
+
+  ngOnInit() '{{ "{" }}'
+
+this.pdfsrc = 'https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf';
+
+ }
+}</code></pre>
+
+
+
+      <p>Don’t hesitate to add any comments/questions in the comment section below.</p>
+
+
+
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScDFzZnBYAnaaYzZA0uBsTXqHH8ZrvXdVksBLFk6W_lcGevdg/viewform?embedded=true" width="640" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+
+
+      <p></p>
+
+    </div> <!-- entry-content clearfix-->
+
+    <div id="comments" class="comments-area">
+    </div> <!-- .comments-area -->				</article>
+</main>

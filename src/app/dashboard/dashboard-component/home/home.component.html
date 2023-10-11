@@ -14,13 +14,136 @@
 <!--</mat-grid-list>-->
 
 
-<div class="widget-cards">
+<!--<div class="widget-cards">-->
 
-  <pb-mind-check style="display: none"> Loading..</pb-mind-check>
-  <app-viewcount [browserData]="browserData">Loading........</app-viewcount>
-  <pb-view-count-by-country [countryData]="countryData">Loading.....</pb-view-count-by-country>
-  <pb-latest-changes>Loading...</pb-latest-changes>
+<!--  <pb-mind-check style="display: none"> Loading..</pb-mind-check>-->
+<!--  <app-viewcount [browserData]="browserData">Loading........</app-viewcount>-->
+<!--  <pb-view-count-by-country [countryData]="countryData">Loading.....</pb-view-count-by-country>-->
+<!--  <pb-latest-changes>Loading...</pb-latest-changes>-->
 
 
+<!--</div>-->
+
+<div class="custom-header ">
+  <div class="custom-header-wrap">
+    <img src="http://localhost:8888/wp-content/themes/extension/images/header-image.jpg" class="header-image" width="80%" height="720" alt="Note of programmer">
+  </div><!-- end .custom-header-wrap -->
 </div>
 
+
+<main id="main" class="site-main" role="main">
+  <header class="page-header">
+
+    <h2 class="page-title">Common and useful VIM commands</h2>
+    <!-- .page-title -->
+
+    <!-- .breadcrumb -->
+  </header><!-- .page-header -->
+
+  <article id="page-214" class="post-214 page type-page status-publish hentry">
+    <div class="entry-content">
+
+
+      <p><strong>Vim is a clone, with additions, of Bill Joy’s vi text editor program for Unix. Vim’s author, Bram Moolenaar, based it upon the source code for a port of the Stevie editor to the Amiga and released a version to the public in 1991.</strong></p>
+
+
+      <div class="wp-block-image">
+        <figure class="aligncenter size-medium"><img decoding="async" fetchpriority="high" width="300" height="300" src="http://localhost:8888wp-content/uploads/2020/05/vim-logo-png-transparent-300x300.png" alt="" class="wp-image-216" test="./assets/images/2020/05/vim-logo-png-transparent-300x300.png 300w, ./assets/images/2020/05/vim-logo-png-transparent-1020x1024.png 1020w, ./assets/images/2020/05/vim-logo-png-transparent-150x150.png 150w, ./assets/images/2020/05/vim-logo-png-transparent-768x771.png 768w, ./assets/images/2020/05/vim-logo-png-transparent-1530x1536.png 1530w, ./assets/images/2020/05/vim-logo-png-transparent-2040x2048.png 2040w, ./assets/images/2020/05/vim-logo-png-transparent-75x75.png 75w" sizes="(max-width: 300px) 100vw, 300px"></figure></div>
+
+
+      <p><strong>Check and make sure you have Vim in your machine,<em> vim –version </em><br>If you don’t have Download Vim from here, <a href="https://www.vim.org/download.php">https://www.vim.org/download.php</a> </strong></p>
+
+
+
+      <p><strong>Open file in vim terminal,   <em>vim  [location of path/filename]<br></em></strong><em><strong>                                                     vim usr/bin/testfile.txt</strong></em></p>
+
+
+
+      <h2 class="wp-block-heading"><strong>Arrows Keys:</strong></h2>
+
+
+
+      <p><strong><em>h  -&gt; left <br>l -&gt;  right <br>j  -&gt;  down <br>k  -&gt;  up</em></strong></p>
+
+
+
+      <h2 class="wp-block-heading"><strong>Navigation:</strong></h2>
+
+
+
+      <p><strong><em>gg -&gt; Go to top<br>G -&gt; Go to the last<br>nG -&gt; Go to the nth line</em></strong><br><strong><em><br>w -&gt; goes next first character of the word<br>nw -&gt; goes next nth character of the word<br>10w -&gt; goes after next 10 words first character</em></strong><br><strong><em><br>b -&gt; goes back first character of the word<br>nb -&gt; goes back nth character of the word<br>10b -&gt; goes back before 10 words first character<br><br>e -&gt; goes last character of the word</em></strong><br><strong><em><br>f -&gt; forward<br>F -&gt; backward<br>ft -&gt; goes to the forward t<br>Ft -&gt; goes to the backward t</em></strong><br><strong><em><br>t -&gt; forward until<br>T -&gt; backward until<br>tt -&gt; goes to the forward until t<br>Tt -&gt; goes to the back until t</em></strong></p>
+
+
+
+      <h2 class="wp-block-heading">Quit From Vim:</h2>
+
+
+
+      <p><strong>First Make sure you are in normal mode <br><em>:q<br>:quit<br>: x<br>:exit<br>ZZ<br>:q!  -&gt; void changes and exit <br>:wq -&gt; save changes and exit </em></strong></p>
+
+
+
+      <h2 class="wp-block-heading">Modes in Vim</h2>
+
+
+
+      <p><strong>Normal<br>Insert<br>Visual</strong></p>
+
+
+
+      <h2 class="wp-block-heading">Normal Mode Commands</h2>
+
+
+
+      <p><strong>Delete<br><em>x</em></strong><em><strong> -&gt;  delete character <br>dw  -&gt;  delete the word<br>dd  -&gt;  delete the line<br>nthdd -&gt; delete the next nth number of words </strong></em><br><strong><em>10dd -&gt; delete the next 10 words<br></em></strong><em><strong>d$ / D -&gt;  delete from cursor to the end of the line</strong></em><strong><em><br></em></strong><br><strong>Copy<br></strong><em><strong>yw -&gt;  copy the word<br>yy -&gt;  copy the line<br>y$  -&gt;  copy the line from cursor to the end of the line</strong></em><br><em><strong><br>p -&gt; put/paste the deleted word/line<br>r -&gt; replace the word<br>u -&gt; undo<br>ctrl +r -&gt; redo</strong></em></p>
+
+
+
+      <h2 class="wp-block-heading">Insert Mode</h2>
+
+
+
+      <p><strong><em>i  -&gt; Change to the Insert Mode<br>I  -&gt;  Change to the insert mode at the first character of the line<br><br>a  -&gt;  insert mode <br>A  -&gt;  insert mode at the end character of the line<br><br>s -&gt;  delete the character and change to the insert mode<br>S  -&gt;  delete the line and change to the insert mode <br><br>o -&gt;  insert the new line into next line and change to the insert mode<br>O  -&gt;  insert the new line into previous line and change to the insert mode<br><br>c -&gt;  change <br>ce / cw -&gt;  change and delete the word and replace the word<br>c$ / C  -&gt;  delete the whole line and  insert <br><br>esc -&gt; come out from edit mode to normal mode<br></em></strong></p>
+
+
+
+      <h2 class="wp-block-heading">Visual Mode</h2>
+
+
+
+      <p><strong><em>v -&gt; change to the visual mode<br>esc -&gt; to come out from visual mode to normal mode</em></strong></p>
+
+
+
+      <h2 class="wp-block-heading">Search In Vim</h2>
+
+
+
+      <p><strong>First change to vim to normal mode <br><em>/search_word<br>?search_word <br>n  -&gt;  go to the next matched word<br>ctrl + o  -&gt;  go back to found word<br>ctrl + i  -&gt;  go to next matched word </em></strong></p>
+
+
+
+      <h2 class="wp-block-heading">Replace in Vim</h2>
+
+
+
+      <p><strong>First change vim to normal mode <br></strong> <strong><em>syntax -&gt;   s/word/new_word/g<br> %/word/new_word/g  -&gt; all words<br> 3,20  s/word/new_word/g  -&gt; – replace from line 3-20<br> %s/word/new_word/gc  -&gt; – replace with confirmation</em></strong> </p>
+
+
+
+      <h2 class="wp-block-heading">Execute commands inside vim</h2>
+
+
+
+      <p><strong>First change vim to normal mode<br><em>syntax -&gt; !command<br>!pwd -&gt; current path <br>!ls -&gt; list of path</em></strong></p>
+
+
+
+      <p></p>
+
+    </div> <!-- entry-content clearfix-->
+
+
+  </article>
+
+</main>

@@ -1,0 +1,244 @@
+<main id="main" class="site-main" role="main">
+  <header class="page-header">
+
+    <h1 class="page-title">Static and Dynamic Tabs in Angular</h1>
+    <!-- .page-title -->
+
+    <!-- .breadcrumb -->
+  </header><!-- .page-header -->
+
+  <article id="page-120" class="post-120 page type-page status-publish hentry">
+    <div class="entry-content">
+
+
+      <figure class="wp-block-image size-large is-resized"><img decoding="async" fetchpriority="high" src="./assets/images/2020/02/Screen-Shot-2020-02-08-at-12.26.00-PM-1024x521.png" alt="" class="wp-image-122" width="586" height="298" test="./assets/images/2020/02/Screen-Shot-2020-02-08-at-12.26.00-PM-1024x521.png 1024w, ./assets/images/2020/02/Screen-Shot-2020-02-08-at-12.26.00-PM-300x153.png 300w, ./assets/images/2020/02/Screen-Shot-2020-02-08-at-12.26.00-PM-768x390.png 768w, ./assets/images/2020/02/Screen-Shot-2020-02-08-at-12.26.00-PM.png 1184w" sizes="(max-width: 586px) 100vw, 586px"></figure>
+     <div>test</div>
+      <figure class="wp-block-image size-large is-resized"><img decoding="async" fetchpriority="high" src="./assets/images/2020/02/Screen-Shot-2020-02-08-at-12.26.00-PM.png" alt="" class="wp-image-122" width="586" height="298" test="./assets/images/2020/02/Screen-Shot-2020-02-08-at-12.26.00-PM-1024x521.png 1024w, ./assets/images/2020/02/Screen-Shot-2020-02-08-at-12.26.00-PM-300x153.png 300w, ./assets/images/2020/02/Screen-Shot-2020-02-08-at-12.26.00-PM-768x390.png 768w, ./assets/images/2020/02/Screen-Shot-2020-02-08-at-12.26.00-PM.png 1184w" sizes="(max-width: 586px) 100vw, 586px"></figure>
+
+
+
+      <p class="has-text-align-left">Hi, There<br>This page is related to creating static and dynamic tabs in angular.<br>Here I am using ngb library. In the market, you can get many libraries that support tab features. Some of them are as follow,</p>
+
+
+
+      <p class="has-text-align-left"><br><em>* Prime NG  <a href="https://www.primefaces.org/primeng/#/tabview">https://www.primefaces.org/primeng/#/tabview</a><br>* NGB Tabset  <a href="https://ng-bootstrap.github.io/#/components/tabset/examples">https://ng-bootstrap.github.io/#/components/tabset/examples</a><br>* Angular material <a href="https://material.angular.io/components/tabs/overview">https://material.angular.io/components/tabs/overview</a></em></p>
+
+
+
+      <p class="has-text-align-left"><strong><br></strong>Below steps will help you to create tabs in Angular by using ngb library . </p>
+
+
+
+      <p><strong>1) Install ngbModule from cli.</strong></p>
+
+
+
+      <pre class="wp-block-code"><code>npm install --save @ng-bootstrap/ng-bootstrap</code></pre>
+
+
+
+      <p><strong>2) Import ngbModule In app.module.ts </strong></p>
+
+
+
+      <pre class="wp-block-code"><code>import '{{ "{" }}'NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+@NgModule('{{ "{" }}'
+
+        imports: [
+        NgbModule
+        ]
+});</code></pre>
+
+
+
+      <p><strong>3) In tabexample.component.html add this code first tabset is for static and second for dynamic.<br></strong></p>
+
+
+
+      <pre class="wp-block-code"><code>&lt;!--For the static tab--&gt;
+
+&lt;ngb-tabset (tabChange)="checkThis()"&gt;
+  &lt;ngb-tab title="Tab One"&gt;
+    &lt;ng-template ngbTabContent&gt;
+      tab one content
+    &lt;/ng-template&gt;
+  &lt;/ngb-tab&gt;
+
+  &lt;ngb-tab title="Tab two"&gt;
+    &lt;ng-template ngbTabContent&gt;
+      tab two content
+    &lt;/ng-template&gt;
+  &lt;/ngb-tab&gt;
+
+
+  &lt;ngb-tab title="Tab three"&gt;
+    &lt;ng-template ngbTabContent&gt;
+      tab three content
+    &lt;/ng-template&gt;
+  &lt;/ngb-tab&gt;
+
+
+&lt;/ngb-tabset&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+
+&lt;!--For the dynamic tab..--&gt;
+
+
+&lt;strong&gt;
+  Another tab having dynamically content
+&lt;/strong&gt;
+
+
+&lt;div&gt;
+  &lt;ngb-tabset (tabChange)="callBackend($event)" [destroyOnHide]="false"&gt;
+    &lt;ngb-tab *ngFor="let tab of alltabs" [title]="tab.tabname" [id]="tab"&gt;
+      &lt;ng-template ngbTabContent&gt;
+        &lt;table class="table-view"&gt;
+          &lt;tr&gt;
+            &lt;th&gt;ID&lt;/th&gt;
+            &lt;th&gt;NAME&lt;/th&gt;
+            &lt;th&gt;PHONE&lt;/th&gt;
+            &lt;th&gt;USERNAME&lt;/th&gt;
+            &lt;th&gt;WEBSITE&lt;/th&gt;
+            &lt;th&gt;EMAIL&lt;/th&gt;
+            &lt;th&gt;COMPANY&lt;/th&gt;
+            &lt;th&gt;ADDRESS&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;'{{ "{" }}''{{ "{" }}'contentdata.id}}&lt;/td&gt;
+            &lt;td&gt;'{{ "{" }}''{{ "{" }}'contentdata.name}}&lt;/td&gt;
+            &lt;td&gt;'{{ "{" }}''{{ "{" }}'contentdata.phone}}&lt;/td&gt;
+            &lt;td&gt;'{{ "{" }}''{{ "{" }}'contentdata.username}}&lt;/td&gt;
+            &lt;td&gt;'{{ "{" }}''{{ "{" }}'contentdata.website}}&lt;/td&gt;
+            &lt;td&gt;'{{ "{" }}''{{ "{" }}'contentdata.email}}&lt;/td&gt;
+            &lt;td&gt;'{{ "{" }}''{{ "{" }}'contentdata.company.name}}&lt;/td&gt;
+            &lt;td&gt;'{{ "{" }}''{{ "{" }}'contentdata.address.street + " " + contentdata.address.city}}&lt;/td&gt;
+
+          &lt;/tr&gt;
+        &lt;/table&gt;
+      &lt;/ng-template&gt;
+
+    &lt;/ngb-tab&gt;
+  &lt;/ngb-tabset&gt;
+&lt;/div&gt;
+</code></pre>
+
+
+
+      <p><strong>4) In tabexample.component.ts add below code</strong></p>
+
+
+
+      <pre class="wp-block-code"><code>import '{{ "{" }}'Component, OnInit} from '@angular/core';
+import '{{ "{" }}'TabService} from '../../provider/tab.service';
+
+@Component('{{ "{" }}'
+        selector: 'app-tabexample',
+        templateUrl: './tabexample.component.html',
+        styleUrls: ['./tabexample.component.scss']
+})
+export class TabexampleComponent implements OnInit '{{ "{" }}'
+
+        alltabs: any[];
+        contentdata: any;
+        private url = 'https://jsonplaceholder.typicode.com/users';
+
+
+        constructor(private tabservice: TabService) '{{ "{" }}'
+    this.alltabs = [
+        '{{ "{" }}'
+        tabname: 'tab one',
+        tabid: 1,
+        tabNumber: 122
+      },
+        '{{ "{" }}'
+        tabname: 'tab two',
+        tabid: 2,
+        tabNumber: 233
+
+      },
+        '{{ "{" }}'
+        tabname: 'tab three',
+        tabid: 3,
+        tabNumber: 344
+
+      },
+        '{{ "{" }}'
+        tabname: 'tab four',
+        tabid: 4,
+        tabNumber: 455
+
+      }
+    ];
+    console.log(this.alltabs);
+  }
+
+  ngOnInit() '{{ "{" }}'
+    this.tabservice.methodGet(this.url + '/' + 1).subscribe(
+      response =&gt; '{{ "{" }}'
+        this.contentdata = response;
+        console.log(this.contentdata);
+      }
+    );
+  }
+
+  checkThis() '{{ "{" }}'
+    console.log('checking tab ');
+  }
+
+  callBackend($event: any) '{{ "{" }}'
+    console.log('calling backend ............' + $event);
+    let data = $event.nextId;
+    this.tabservice.methodGet(this.url + '/' + data.tabid).subscribe(
+      response =&gt; '{{ "{" }}'
+        this.contentdata = response;
+        console.log(this.contentdata);
+      }
+    );
+
+
+  }
+
+}
+</code></pre>
+
+
+
+      <p><strong>5) To call dynamic data to create services class as  tab.services.ts and below code</strong></p>
+
+
+
+      <pre class="wp-block-code"><code>import '{{ "{" }}'Injectable} from '@angular/core';
+import '{{ "{" }}'HttpClient} from '@angular/common/http';
+
+@Injectable('{{ "{" }}'
+        providedIn: 'root'
+})
+export class TabService '{{ "{" }}'
+
+        constructor(private http: HttpClient) '{{ "{" }}'
+  }
+
+  methodGet(url: any) '{{ "{" }}'
+    return this.http.get(url);
+  }
+}
+</code></pre>
+
+
+
+      <p><strong>Let me know if you have any questions and comments. </strong></p>
+
+    </div> <!-- entry-content clearfix-->
+
+    <div id="comments" class="comments-area">
+      <div id="respond" class="comment-respond">
+        <h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/tabs-angular/#respond" style="display:none;">Cancel reply</a></small></h3><form action="http://localhost:8888/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate=""><p class="logged-in-as">Logged in as Sirjana GhimireAcharya. <a href="http://localhost:8888/wp-admin/profile.php">Edit your profile</a>. <a href="http://localhost:8888/wp-login.php?action=logout&amp;redirect_to=http%3A%2F%2Flocalhost%3A8888%2Ftabs-angular%2F&amp;_wpnonce=0a1b7f135a">Log out?</a> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p><p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required=""></textarea></p><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="120" id="comment_post_ID">
+        <input type="hidden" name="comment_parent" id="comment_parent" value="0">
+      </p><input type="hidden" id="_wp_unfiltered_html_comment_disabled" name="_wp_unfiltered_html_comment" value="d216b57a55"><script>(function()'{{ "{" }}'if(window===window.parent)'{{ "{" }}'document.getElementById('_wp_unfiltered_html_comment_disabled').name='_wp_unfiltered_html_comment';}})();</script>
+      </form>	</div><!-- #respond -->
+    </div> <!-- .comments-area -->				</article>
+</main>
