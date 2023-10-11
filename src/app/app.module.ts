@@ -23,7 +23,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {HomeComponent} from './dashboard/dashboard-component/home/home.component';
 import {FrontEndComponent} from './Users/front-end/front-end.component';
 import {BackEndComponent} from './Users/back-end/back-end.component';
-import {ChartsModule} from "ng2-charts";
+// import {ChartsModule} from "ng2-charts";
 import {ViewCountByCountryComponent} from './dashboard/dashboard-component/home/view-count-by-country/view-count-by-country.component';
 import {UtilService} from "./provider/util.service";
 import {CommonService} from "./provider/common.service";
@@ -97,7 +97,7 @@ const routs: Routes = [
     RouterModule.forRoot(routs),
     MatCardModule,
     HttpClientModule,
-    ChartsModule,
+    // ChartsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     FormsModule,
@@ -109,7 +109,7 @@ const routs: Routes = [
     // AgmCoreModule.forRoot({
     //   apiKey: 'AIzaSyC5MwxNX-MUEU3vHDcd8BK5KfjV4eZSv2I'
     // }),
-    TableModule, 
+    TableModule,
 
   ],
   providers: [UtilService, CommonService, GlobalVariable, MatSnackBar],
